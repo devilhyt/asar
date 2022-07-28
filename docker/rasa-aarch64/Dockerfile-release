@@ -1,0 +1,13 @@
+FROM rasa-aarch64:base
+
+RUN rm -rf /rasa-venv/lib/python3.8/site-packages/rasa/cli/initial_project
+COPY ./build/initial_project /rasa-venv/lib/python3.8/site-packages/rasa/cli/initial_project
+
+ENV HOME=/app
+WORKDIR /app
+
+VOLUME /tmp
+
+EXPOSE 5005
+ENTRYPOINT ["rasa"]
+CMD ["--help"]

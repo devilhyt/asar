@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  rasa:
+    image: rasa/rasa:3.1.0-full
+    networks:
+      - rasa-network
+    ports:
+      - 5005:5005
+    volumes:
+      - ./app:/app
+    command: "run --enable-api"
+    
+  action:
+    image: rasa/rasa-sdk:3.1.1
+    networks:
+      - rasa-network
+    ports:
+      - 5055:5055
+    volumes:
+      - ./app/actions:/app/actions
+    command: "start --actions actions --auto-reload"
+
+networks:
+  rasa-network:

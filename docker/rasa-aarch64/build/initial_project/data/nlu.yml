@@ -1,0 +1,52 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - 嘿
+    - 哈嘍
+    - 嗨
+    - 你好
+    - 早安
+    - 午安
+    - 早
+    - 安安
+
+- intent: goodbye
+  examples: |
+    - 掰掰
+    - 88
+    - 掰
+    - 晚安
+    - 再見
+
+- intent: affirm
+  examples: |
+    - 是
+    - 有
+    - 當然
+
+- intent: deny
+  examples: |
+    - 不
+    - 沒
+    - 沒有
+
+- intent: mood_great
+  examples: |
+    - 不錯
+    - 還不錯
+    - 很好
+    - 非常棒
+
+- intent: mood_unhappy
+  examples: |
+    - 不好
+    - 不太好
+    - 很糟
+    - 不太順利
+
+- intent: action_test
+  examples: |
+    - action測試
+

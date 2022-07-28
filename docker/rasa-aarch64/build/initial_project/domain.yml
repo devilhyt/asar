@@ -1,0 +1,41 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - action_test
+
+responses:
+  utter_greet:
+  - text: "哈嘍！你好嗎？"
+  - text: "嘿！最近過得如何？"
+  - text: "嗨！今天過得好嗎？"
+
+  utter_cheer_up:
+  - text: "希望這張有趣的圖片能讓你變得更開心:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "有幫助到你嗎？"
+  - text: "有感覺好點嗎？"
+  - text: "是不是感覺比較開心了呢？"
+
+  utter_happy:
+  - text: "太好了！"
+  - text: "太棒了！"
+  - text: "真是太好了！"
+
+  utter_goodbye:
+  - text: "掰掰"
+  - text: "再見"
+
+actions:
+  - action_hello_world
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

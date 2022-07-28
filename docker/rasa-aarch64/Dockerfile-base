@@ -1,0 +1,19 @@
+# build rasa image online using venv with requirement.txt
+
+# s1
+FROM python:3.8-bullseye AS builder
+
+COPY ./build/package /build/package
+
+RUN python -m venv /rasa-venv \
+    && /rasa-venv/bin/pip install -U --no-cache-dir pip \
+    && /rasa-venv/bin/pip install -U --no-cache-dir setuptools wheel \
+    && /rasa-venv/bin/pip install -U --no-cache-dir --no-deps -f /build/package/wheels -f https://tf.kmtea.eu/whl/stable.html -r /build/package/requirement.txt
+
+# s2
+FROM python:3.8-slim-bullseye
+
+COPY --from=builder /rasa-venv /rasa-venv
+ENV PATH="/rasa-venv/bin:$PATH"
+
+
