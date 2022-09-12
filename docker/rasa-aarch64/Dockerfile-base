@@ -1,19 +1,43 @@
-# build rasa image online using venv with requirement.txt
-
-# s1
+# the default Docker image
 FROM python:3.8-bullseye AS builder
 
+# install dependencies
 COPY ./build/package /build/package
+RUN set -eux; \
+        python -m venv /opt/venv; \
+        . /opt/venv/bin/activate; \
+        pip install -U --no-cache-dir pip \
+        pip install -U --no-cache-dir setuptools wheel \
+        pip install \
+            -U \
+            --no-cache-dir \
+            -f /build/package/wheels \
+            -f https://tf.kmtea.eu/whl/stable.html \
+            rasa[jieba,transformers]==3.2.8 \
+            tokenizers==0.10.2 \
+        ;
 
-RUN python -m venv /rasa-venv \
-    && /rasa-venv/bin/pip install -U --no-cache-dir pip \
-    && /rasa-venv/bin/pip install -U --no-cache-dir setuptools wheel \
-    && /rasa-venv/bin/pip install -U --no-cache-dir --no-deps -f /build/package/wheels -f https://tf.kmtea.eu/whl/stable.html -r /build/package/requirement.txt
-
-# s2
+# start a new build stage
 FROM python:3.8-slim-bullseye
 
-COPY --from=builder /rasa-venv /rasa-venv
-ENV PATH="/rasa-venv/bin:$PATH"
+COPY --from=builder /opt/venv /opt/venv
+
+# use venv
+ENV PATH="/opt/venv/bin:$PATH"
+
+# set HOME
+ENV HOME=/app
+WORKDIR /app
+
+# create a volume for temporary data
+VOLUME /tmp
+
+# change shell
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+
+# the entry point
+EXPOSE 5005
+ENTRYPOINT ["rasa"]
+CMD ["--help"]
 
 
