@@ -1,7 +1,6 @@
 test/
 docker/rasa-amd64/app
 docker/rasa-aarch64/image/*.tar
-bfg.jar
 
 # Windows thumbnail cache files
 Thumbs.db
