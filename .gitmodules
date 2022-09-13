@@ -1,0 +1,3 @@
+[submodule "api/app"]
+	path = api/app
+	url = https://github.com/devilhyt/wingman-api.git
