@@ -23,7 +23,7 @@ services:
   
   api:
     image: wingman-api:latest
-    command: ["--bind", "0.0.0.0:5500", "wingman_api:create_app()"]
+    command: ["--reload", "--log-level=debug", "--bind=0.0.0.0:5500", "wingman_api:create_app()"]
     volumes:
       - ./api/app:/app
     networks:
