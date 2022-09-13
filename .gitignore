@@ -1,7 +1,3 @@
-test/
-docker/rasa-amd64/app
-docker/rasa-aarch64/image/*.tar
-
 # Windows thumbnail cache files
 Thumbs.db
 Thumbs.db:encryptable
