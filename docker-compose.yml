@@ -1,5 +1,11 @@
 version: '3.8'
 
+volumes:
+  api-vscode-ext:
+
+networks:
+  rasa:
+
 services:
   app:
     image: rasa:custom
@@ -26,12 +32,11 @@ services:
     command: ["--reload", "--log-level=debug", "--bind=0.0.0.0:5500", "wingman_api:create_app()"]
     volumes:
       - ./api/app:/app
+      - api-vscode-ext:/root/.vscode-server/extensions
     networks:
       - rasa
     ports:
       - 5500:5500
-networks:
-  rasa:
   
 # docker run -it --rm --network rasa --net-alias rasa -p 5005:5005 -v ~/app:/app rasa:custom shell
 # docker run -it --rm --network rasa --net-alias action -p 5055:5055 -v ~/app/actions:/app/actions rasa-sdk:custom start -v -vv --actions actions
