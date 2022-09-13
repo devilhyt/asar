@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   app:
-    image: rasa-aarch64:latest
+    image: rasa:custom
     command: "run --enable-api"
     volumes:
       - ~/app:/app
@@ -12,7 +12,7 @@ services:
       - 5005:5005
     
   action:
-    image: rasa-sdk-aarch64:latest
+    image: rasa-sdk:custom
     command: "start --actions actions --auto-reload"
     volumes:
       - ~/app/actions:/app/actions
@@ -24,5 +24,5 @@ services:
 networks:
   rasa:
   
-# docker run -it --rm --network rasa --net-alias rasa -p 5005:5005 -v ~/app:/app rasa-aarch64:latest shell
-# docker run -it --rm --network rasa --net-alias action -p 5055:5055 -v ~/app/actions:/app/actions rasa-sdk-aarch64:latest start -v -vv --actions actions
+# docker run -it --rm --network rasa --net-alias rasa -p 5005:5005 -v ~/app:/app rasa:custom shell
+# docker run -it --rm --network rasa --net-alias action -p 5055:5055 -v ~/app/actions:/app/actions rasa-sdk:custom start -v -vv --actions actions
