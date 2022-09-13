@@ -20,7 +20,16 @@ services:
       - rasa
     ports:
       - 5055:5055
-
+  
+  api:
+    image: wingman-api:latest
+    command: ["--bind", "0.0.0.0:5500", "wingman_api:create_app()"]
+    volumes:
+      - ./api/app:/app
+    networks:
+      - rasa
+    ports:
+      - 5500:5500
 networks:
   rasa:
   

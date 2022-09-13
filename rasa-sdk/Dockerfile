@@ -18,11 +18,14 @@ RUN set -eux; \
         rm -rf /var/lib/apt/lists/*;
 
 RUN set -eux; \
-        pip install -U --no-cache-dir pip \
-        pip install -U --no-cache-dir setuptools wheel \
-        pip install \
-            -U \
-            --no-cache-dir \
+        pip install -U --no-cache-dir \
+            pip \
+        ; \
+        pip install -U --no-cache-dir \
+            setuptools \
+            wheel \
+        ; \
+        pip install -U --no-cache-dir \
             -r requirements.txt \
         ;
 
