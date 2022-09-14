@@ -37,6 +37,7 @@ services:
       - rasa
     ports:
       - 5500:5500
+    restart: unless-stopped
   
 # docker run -it --rm --network rasa --net-alias rasa -p 5005:5005 -v ~/app:/app rasa:custom shell
 # docker run -it --rm --network rasa --net-alias action -p 5055:5055 -v ~/app/actions:/app/actions rasa-sdk:custom start -v -vv --actions actions
