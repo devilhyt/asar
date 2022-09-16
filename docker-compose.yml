@@ -32,6 +32,8 @@ services:
     command:
       [
         "--reload",
+        "--access-logfile=-",
+        "--access-logformat='%({x-forwarded-for}i)s %(h)s %(l)s %(u)s %(t)s \"%(r)s\" %(s)s %(b)s \"%(f)s\" \"%(a)s\"'",
         "--log-level=debug",
         "--bind=0.0.0.0:5500",
         "wingman_api:create_app()",
