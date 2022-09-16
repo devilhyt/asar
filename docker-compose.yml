@@ -1,4 +1,4 @@
-version: '3.8'
+version: "3.8"
 
 volumes:
   api-vscode-ext:
@@ -16,7 +16,7 @@ services:
       - rasa
     ports:
       - 5005:5005
-    
+
   action:
     image: rasa-sdk:custom
     command: "start --actions actions --auto-reload"
@@ -26,10 +26,16 @@ services:
       - rasa
     ports:
       - 5055:5055
-  
+
   api:
     image: wingman-api:latest
-    command: ["--reload", "--log-level=debug", "--bind=0.0.0.0:5500", "wingman_api:create_app()"]
+    command:
+      [
+        "--reload",
+        "--log-level=debug",
+        "--bind=0.0.0.0:5500",
+        "wingman_api:create_app()",
+      ]
     volumes:
       - ./api/app:/app
       - api-vscode-ext:/root/.vscode-server/extensions
@@ -38,6 +44,15 @@ services:
     ports:
       - 5500:5500
     restart: unless-stopped
-  
+
+  tunnel:
+    image: cloudflare/cloudflared:latest
+    command: "tunnel --no-autoupdate run"
+    environment:
+      TUNNEL_TOKEN:
+    networks:
+      - rasa
+    restart: unless-stopped
+
 # docker run -it --rm --network rasa --net-alias rasa -p 5005:5005 -v ~/app:/app rasa:custom shell
 # docker run -it --rm --network rasa --net-alias action -p 5055:5055 -v ~/app/actions:/app/actions rasa-sdk:custom start -v -vv --actions actions
