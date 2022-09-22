@@ -13,6 +13,8 @@ RUN set -eux; \
             -r requirements.txt \
         ;
 
+RUN mkdir -p /data
+
 WORKDIR /app
 
 ENTRYPOINT [ "gunicorn" ]

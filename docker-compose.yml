@@ -40,6 +40,7 @@ services:
       ]
     volumes:
       - ./api/app:/app
+      - ./api/data:/data
       - api-vscode-ext:/root/.vscode-server/extensions
     networks:
       - rasa
