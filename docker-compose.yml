@@ -8,10 +8,11 @@ networks:
 
 services:
   app:
-    image: rasa:custom
+    image: rasa:base
     command: "run --enable-api"
     volumes:
       - ./rasa/app:/app
+      - ./api/data:/data
     networks:
       - rasa
     ports:

@@ -14,10 +14,12 @@ RUN set -eux; \
             wheel \
         ; \
         pip install -U --no-cache-dir \
+            numpy==1.19.5 \
+        ; \
+        pip install -U --no-cache-dir \
             -f /build/package/wheels \
             -f https://tf.kmtea.eu/whl/stable.html \
             rasa[jieba,transformers]==3.2.8 \
-            matplotlib==3.3.3 \
             tokenizers==0.10.2 \
         ;
 
