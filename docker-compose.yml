@@ -36,6 +36,7 @@ services:
         "--access-logfile=-",
         "--access-logformat='%({x-forwarded-for}i)s %(h)s %(l)s %(u)s %(t)s \"%(r)s\" %(s)s %(b)s \"%(f)s\" \"%(a)s\"'",
         "--log-level=debug",
+        "--timeout=300",
         "--bind=0.0.0.0:5500",
         "asar_api:create_app()",
       ]
