@@ -11,7 +11,7 @@ services:
     image: rasa:custom
     command: "run --enable-api"
     volumes:
-      - ~/app:/app
+      - ./rasa/app:/app
     networks:
       - rasa
     ports:
