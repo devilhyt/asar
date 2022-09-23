@@ -17,11 +17,12 @@ RUN set -eux; \
             -f /build/package/wheels \
             -f https://tf.kmtea.eu/whl/stable.html \
             rasa[jieba,transformers]==3.2.8 \
+            matplotlib==3.3.3 \
             tokenizers==0.10.2 \
         ;
 
 # start a new build stage
-FROM python:3.8-slim-bullseye
+FROM python:3.8-bullseye
 
 COPY --from=builder /opt/venv /opt/venv
 
