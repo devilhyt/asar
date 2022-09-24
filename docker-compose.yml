@@ -9,7 +9,7 @@ networks:
 services:
   app:
     image: rasa:base
-    command: "run --enable-api"
+    command: "run --enable-api --endpoints /data/endpoints.yml --credentials /data/credentials.yml"
     volumes:
       - ./rasa/app:/app
       - ./api/data:/data
