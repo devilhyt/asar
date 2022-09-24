@@ -8,6 +8,7 @@ networks:
 
 services:
   app:
+    container_name: app
     image: rasa:base
     command: "run --enable-api --endpoints /data/endpoints.yml --credentials /data/credentials.yml"
     volumes:
@@ -19,6 +20,7 @@ services:
       - 5005:5005
 
   action:
+    container_name: action
     image: rasa-sdk:custom
     command: "start --actions actions --auto-reload"
     volumes:
@@ -29,6 +31,7 @@ services:
       - 5055:5055
 
   api:
+    container_name: api
     image: asar-api:latest
     command:
       [
@@ -43,6 +46,7 @@ services:
     volumes:
       - ./api/app:/app
       - ./api/data:/data
+      - /var/run/docker.sock:/var/run/docker.sock
       - api-vscode-ext:/root/.vscode-server/extensions
     networks:
       - rasa
