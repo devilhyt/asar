@@ -10,7 +10,7 @@ services:
   app:
     container_name: app
     image: rasa:base
-    command: "run --enable-api --endpoints /data/endpoints.yml --credentials /data/credentials.yml"
+    command: "run --enable-api" # --endpoints /data/endpoints.yml --credentials /data/credentials.yml"
     volumes:
       - ./rasa/app:/app
       - ./api/data:/data
@@ -65,3 +65,4 @@ services:
 
 # docker run -it --rm --network rasa --net-alias rasa -p 5005:5005 -v ~/app:/app rasa:custom shell
 # docker run -it --rm --network rasa --net-alias action -p 5055:5055 -v ~/app/actions:/app/actions rasa-sdk:custom start -v -vv --actions actions
+# docker run -it --rm -v $(pwd)/rasa/app:/app rasa:base init
