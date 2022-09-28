@@ -24,7 +24,7 @@ services:
     image: rasa-sdk:custom
     command: "start --actions actions --auto-reload"
     volumes:
-      - ~/app/actions:/app/actions
+      - ./rasa/app/actions:/app/actions
     networks:
       - rasa
     ports:
@@ -48,6 +48,9 @@ services:
       - ./api/data:/data
       - /var/run/docker.sock:/var/run/docker.sock
       - api-vscode-ext:/root/.vscode-server/extensions
+    environment:
+      RASA_API_URL: http://app:5005
+      ASAR_API_URL: http://api:5500
     networks:
       - rasa
     ports:
