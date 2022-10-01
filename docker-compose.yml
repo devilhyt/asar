@@ -46,11 +46,13 @@ services:
     volumes:
       - ./api/app:/app
       - ./api/data:/data
-      - /var/run/docker.sock:/var/run/docker.sock
+      - ./rasa/app:/rasa-app
+      # - /var/run/docker.sock:/var/run/docker.sock
       - api-vscode-ext:/root/.vscode-server/extensions
     environment:
       RASA_API_URL: http://app:5005
       ASAR_API_URL: http://api:5500
+      RASA_APP_PATH: /rasa-app
     networks:
       - rasa
     ports:
