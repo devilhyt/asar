@@ -52,7 +52,7 @@ services:
     environment:
       RASA_API_URL: http://app:5005
       ASAR_API_URL: http://api:5500
-      RASA_APP_PATH: /rasa-app
+      RASA_APP_ROOT: /rasa-app
     networks:
       - rasa
     ports:
