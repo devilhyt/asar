@@ -18,6 +18,7 @@ services:
       - rasa
     ports:
       - 5005:5005
+    restart: unless-stopped
 
   action:
     container_name: action
@@ -29,6 +30,7 @@ services:
       - rasa
     ports:
       - 5055:5055
+    restart: unless-stopped
 
   api:
     container_name: api
