@@ -50,25 +50,25 @@ class CkipTransformersExtractor(GraphComponent, EntityExtractorMixin):
             "dimensions": None,
 
             # Parameters for creating driver.
-            # (str optional, defaults to 3, must be 1—3) – The model level. The higher the level is, the more accurate and slower the model is.
-            "level": 3,
-            # (str optional, overwrites level) – The pretrained model name (e.g. 'ckiplab/bert-base-chinese-ner').
+            # model (str optional, defaults to “bert-base”.) – The pretrained model name provided by CKIP Transformers.
+            "model": 'albert-base',
+            # model_name (str optional, overwrites model) – The custom pretrained model name (e.g. 'ckiplab/bert-base-chinese-ws').
             "model_name": None,
-            # (int, optional, defaults to -1,) – Device ordinal for CPU/GPU supports. Setting this to -1 will leverage CPU, a positive will run the model on the associated CUDA device id.
+            # device (int or torch.device, optional, defaults to -1) – Device ordinal for CPU/GPU supports. Setting this to -1 will leverage CPU, a positive will run the model on the associated CUDA device id.
             "device": -1,
 
             # Parameters for calling the driver.
-            # (bool, optional, defaults to False) – Segment sentence (internally) using delim_set.
+            # use_delim (bool, optional, defaults to False) – Segment sentence (internally) using delim_set.
             "use_delim": False,
-            # (str, optional, defaults to '，,。：:；;！!？?') – Used for sentence segmentation if use_delim=True.
+            # delim_set (str, optional, defaults to '，,。：:；;！!？?') – Used for sentence segmentation if use_delim=True.
             "delim_set": "，,。：:；;！!？?",
-            # (int, optional, defaults to 256) – The size of mini-batch.
+            # batch_size (int, optional, defaults to 256) – The size of mini-batch.
             "batch_size": 256,
-            # The maximum length of the sentence, must not longer then the maximum sequence length for this model (i.e. tokenizer.model_max_length).
+            # max_length (int, optional) – The maximum length of the sentence, must not longer then the maximum sequence length for this model (i.e. tokenizer.model_max_length).
             "max_length": None,
-            # (int, optional, defaults to True) – Show progress bar
+            # show_progress (int, optional, defaults to True) – Show progress bar.
             "show_progress": True,
-            # (bool, optional, defaults to True) – Pin memory in order to accelerate the speed of data transfer to the GPU. This option is incompatible with multiprocessing.
+            # pin_memory (bool, optional, defaults to True) – Pin memory in order to accelerate the speed of data transfer to the GPU. This option is incompatible with multiprocessing.
             "pin_memory": True,
         }
 
@@ -76,7 +76,7 @@ class CkipTransformersExtractor(GraphComponent, EntityExtractorMixin):
         """Initialize CkipTransformersExtractor."""
         self._config = config
         from ckip_transformers.nlp import CkipNerChunker
-        self.ner_driver = CkipNerChunker(level=config["level"],
+        self.ner_driver = CkipNerChunker(model=config["model"],
                                          model_name=config["model_name"],
                                          device=config["device"])
 
