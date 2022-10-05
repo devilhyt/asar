@@ -9,8 +9,8 @@ networks:
 services:
   app:
     container_name: app
-    image: rasa:base
-    command: "run -v -vv --enable-api" # --endpoints /data/endpoints.yml --credentials /data/credentials.yml"
+    image: rasa:custom
+    command: "run -vv --enable-api" # --endpoints /data/endpoints.yml --credentials /data/credentials.yml"
     volumes:
       - ./rasa/app:/app
       - ./api/data:/data
