@@ -1,7 +1,7 @@
 # the default Docker image
 FROM python:3.8-bullseye AS builder
 
-# install dependencies
+# install dependencies. Use Numpy v1.19.5 to build matplotlib.
 COPY ./build/package /build/package
 RUN set -eux; \
         python -m venv /opt/venv; \
