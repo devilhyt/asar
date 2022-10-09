@@ -37,7 +37,9 @@ services:
     image: asar-api:latest
     command:
       [
-        "--worker-class=gevent",
+        "--worker-class=gthread",
+        "--workers=1",
+        "--threads=4",
         "--reload",
         "--access-logfile=-",
         "--access-logformat='%({x-forwarded-for}i)s %(h)s %(l)s %(u)s %(t)s \"%(r)s\" %(s)s %(b)s \"%(f)s\" \"%(a)s\"'",
