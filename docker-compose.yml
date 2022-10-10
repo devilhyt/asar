@@ -44,7 +44,6 @@ services:
         "--access-logfile=-",
         "--access-logformat='%({x-forwarded-for}i)s %(h)s %(l)s %(u)s %(t)s \"%(r)s\" %(s)s %(b)s \"%(f)s\" \"%(a)s\"'",
         "--log-level=debug",
-        "--timeout=300",
         "--bind=0.0.0.0:5500",
         "asar_api:create_app()",
       ]
@@ -73,6 +72,4 @@ services:
       - rasa
     restart: unless-stopped
 
-# docker run -it --rm --network rasa --net-alias rasa -p 5005:5005 -v ~/app:/app rasa:custom shell
-# docker run -it --rm --network rasa --net-alias action -p 5055:5055 -v ~/app/actions:/app/actions rasa-sdk:custom start -v -vv --actions actions
 # docker run -it --rm -v $(pwd)/rasa/app:/app rasa:base init
