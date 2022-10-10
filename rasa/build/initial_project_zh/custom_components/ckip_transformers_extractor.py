@@ -35,8 +35,8 @@ class CkipTransformersExtractor(GraphComponent, EntityExtractorMixin):
         """Supported languages."""
         return ["zh"]
 
-    @classmethod
-    def required_packages(cls) -> List[Text]:
+    @staticmethod
+    def required_packages() -> List[Text]:
         """Lists required dependencies (see parent class for full docstring)."""
         return ["ckip_transformers"]
 
@@ -59,9 +59,9 @@ class CkipTransformersExtractor(GraphComponent, EntityExtractorMixin):
 
             # Parameters for calling the driver.
             # use_delim (bool, optional, defaults to False) – Segment sentence (internally) using delim_set.
-            "use_delim": False,
+            "use_delim": True,
             # delim_set (str, optional, defaults to '，,。：:；;！!？?') – Used for sentence segmentation if use_delim=True.
-            "delim_set": "，,。：:；;！!？?",
+            "delim_set": "，,。：:；;！!？? ",
             # batch_size (int, optional, defaults to 256) – The size of mini-batch.
             "batch_size": 256,
             # max_length (int, optional) – The maximum length of the sentence, must not longer then the maximum sequence length for this model (i.e. tokenizer.model_max_length).

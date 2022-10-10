@@ -24,8 +24,8 @@ class CkipTransformersTokenizer(Tokenizer):
         """Supported languages."""
         return ["zh"]
 
-    @classmethod
-    def required_packages(cls) -> List[Text]:
+    @staticmethod
+    def required_packages() -> List[Text]:
         """Any extra python dependencies required for this component to run."""
         return ["ckip_transformers"]
 
@@ -51,9 +51,9 @@ class CkipTransformersTokenizer(Tokenizer):
 
             # Parameters for calling the driver.
             # use_delim (bool, optional, defaults to False) – Segment sentence (internally) using delim_set.
-            "use_delim": False,
+            "use_delim": True,
             # delim_set (str, optional, defaults to '，,。：:；;！!？?') – Used for sentence segmentation if use_delim=True.
-            "delim_set": "，,。：:；;！!？?",
+            "delim_set": "，,。：:；;！!？? ",
             # batch_size (int, optional, defaults to 256) – The size of mini-batch.
             "batch_size": 256,
             # max_length (int, optional) – The maximum length of the sentence, must not longer then the maximum sequence length for this model (i.e. tokenizer.model_max_length).
@@ -84,7 +84,6 @@ class CkipTransformersTokenizer(Tokenizer):
 
     def tokenize(self, message: Message, attribute: Text) -> List[Token]:
         """Tokenizes the text of the provided attribute of the incoming message."""
-        from ckip_transformers.nlp import CkipWordSegmenter
 
         text = message.get(attribute)
 
@@ -99,8 +98,10 @@ class CkipTransformersTokenizer(Tokenizer):
                                 show_progress=self._config["show_progress"],
                                 pin_memory=self._config["pin_memory"]
                                 )
+        # Delete whitespace
+        tokenized = [w for w in ws[0] if w and w.strip()]
 
         # Convert words to tokens
-        tokens = self._convert_words_to_tokens(ws[0], text)
+        tokens = self._convert_words_to_tokens(tokenized, text)
 
         return self._apply_token_pattern(tokens)
