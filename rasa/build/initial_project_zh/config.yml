@@ -26,10 +26,11 @@ pipeline:
   model_name: "./custom_components/albert-base-chinese-ner"
   show_progress: false
   dimensions:
-- name: DIETClassifier
+- name: custom_components.diet_classifier.DIETClassifier
   epochs: 100
   # sigmoid cross entropy loss
   constrain_similarities: true
+  dimensions:
 - name: RegexEntityExtractor
   # use match word boundaries for lookup table
   use_word_boundaries: False
