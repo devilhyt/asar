@@ -54,6 +54,7 @@ services:
       # - /var/run/docker.sock:/var/run/docker.sock
       - api-vscode-ext:/root/.vscode-server/extensions
     environment:
+      SECRET_KEY:
       RASA_API_URL: http://app:5005
       ASAR_API_URL: http://api:5500
       RASA_APP_ROOT: /rasa-app
