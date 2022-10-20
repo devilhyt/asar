@@ -10,7 +10,7 @@ services:
   app:
     container_name: app
     image: rasa:custom
-    command: "run -vv --enable-api" # --endpoints /data/endpoints.yml --credentials /data/credentials.yml"
+    command: "run -vv --enable-api"
     volumes:
       - ./rasa/app:/app
       - ./api/data:/data
@@ -51,12 +51,15 @@ services:
       - ./api/app:/app
       - ./api/data:/data
       - ./rasa/app:/rasa-app
-      # - /var/run/docker.sock:/var/run/docker.sock
       - api-vscode-ext:/root/.vscode-server/extensions
     environment:
       SECRET_KEY:
-      RASA_API_URL: http://app:5005
-      ASAR_API_URL: http://api:5500
+      RASA_API_PROTOCOL: http
+      RASA_API_HOST: app
+      RASA_API_PORT: 5005
+      ASAR_API_PROTOCOL: http
+      ASAR_API_HOST: api
+      ASAR_API_PORT: 5500
       RASA_APP_ROOT: /rasa-app
     networks:
       - rasa
