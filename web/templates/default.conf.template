@@ -1,0 +1,19 @@
+server {
+    listen       ${NGINX_PORT};
+    server_name  localhost;
+
+    location / {
+        root   /app;
+        index  index.html;
+        try_files $uri $uri/ /index.html;
+    }
+
+    location /api/ {
+        proxy_pass   ${ASAR_API_PROTOCOL}://${ASAR_API_HOST}:${ASAR_API_PORT}/;
+    }
+
+    error_page   500 502 503 504  /50x.html;
+    location = /50x.html {
+        root   html;
+    }
+  }

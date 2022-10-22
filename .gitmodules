@@ -1,3 +1,6 @@
 [submodule "api/app"]
 	path = api/app
 	url = https://github.com/devilhyt/asar-api.git
+[submodule "web/app"]
+	path = web/app
+	url = https://github.com/Paxton90/asar-app.git
