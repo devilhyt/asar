@@ -67,6 +67,21 @@ services:
       - 5500:5500
     restart: unless-stopped
 
+  web:
+    container_name: web
+    image: asar-web:latest
+    environment:
+      ASAR_API_PROTOCOL: http
+      ASAR_API_HOST: api
+      ASAR_API_PORT: 5500
+    networks:
+      - rasa
+    ports:
+      - 80:80
+    restart: unless-stopped
+    depends_on:
+      - api
+
   tunnel:
     image: cloudflare/cloudflared:latest
     command: "tunnel --no-autoupdate run"

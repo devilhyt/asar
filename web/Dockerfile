@@ -1,4 +1,4 @@
-FROM node:latest AS builder
+FROM node:lts-bullseye AS builder
 COPY ./app /app
 WORKDIR /app
 RUN set -eux; \
@@ -11,5 +11,6 @@ COPY --from=builder /app/dist /app
 COPY ./templates /etc/nginx/templates
 
 ENV NGINX_PORT=80
+ENV ASAR_API_PROTOCOL=http
 ENV ASAR_API_HOST=api
 ENV ASAR_API_PORT=5500
