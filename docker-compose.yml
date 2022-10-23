@@ -83,6 +83,7 @@ services:
       - api
 
   tunnel:
+    container_name: tunnel
     image: cloudflare/cloudflared:latest
     command: "tunnel --no-autoupdate run"
     environment:
