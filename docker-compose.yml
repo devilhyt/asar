@@ -37,6 +37,7 @@ services:
     image: asar-api:latest
     command:
       [
+        "--bind=0.0.0.0:5500",
         "--worker-class=gthread",
         "--workers=1",
         "--threads=4",
@@ -44,7 +45,6 @@ services:
         "--access-logfile=-",
         "--access-logformat='%({x-forwarded-for}i)s %(h)s %(l)s %(u)s %(t)s \"%(r)s\" %(s)s %(b)s \"%(f)s\" \"%(a)s\"'",
         "--log-level=debug",
-        "--bind=0.0.0.0:5500",
         "asar_api:create_app()",
       ]
     volumes:
@@ -78,9 +78,9 @@ services:
       - rasa
     ports:
       - 80:80
-    restart: unless-stopped
     depends_on:
       - api
+    restart: unless-stopped
 
   tunnel:
     container_name: tunnel
