@@ -1,8 +1,5 @@
 version: "3.8"
 
-volumes:
-  api-vscode-ext:
-
 networks:
   rasa:
 
@@ -51,7 +48,6 @@ services:
       - ./api/app:/app
       - ./api/data:/data
       - ./rasa/app:/rasa-app
-      - api-vscode-ext:/root/.vscode-server/extensions
     environment:
       SECRET_KEY:
       RASA_API_PROTOCOL: http
