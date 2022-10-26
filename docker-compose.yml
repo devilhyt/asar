@@ -21,6 +21,7 @@ services:
     container_name: action
     image: rasa-sdk:custom
     command: "start --actions actions --auto-reload"
+    privileged: true
     volumes:
       - ./rasa/app/actions:/app/actions
     networks:

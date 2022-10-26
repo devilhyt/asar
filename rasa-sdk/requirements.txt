@@ -1,3 +1,4 @@
 RPi.GPIO
 RPLCD
 smbus2
+dht11
