@@ -3,13 +3,13 @@ FROM rasa-sdk:base
 # Use subdirectory as working directory
 WORKDIR /app
 
-# Copy any additional custom requirements, if necessary (uncomment next line)
+# Copy any additional custom requirements
 COPY ./requirements.txt ./
 
 # Change back to root user to install dependencies
 USER root
 
-# Install extra requirements for actions code, if necessary (uncomment next line)
+# Install extra requirements for actions code
 RUN set -eux; \
         apt-get update; \
         apt-get install -y --no-install-recommends \

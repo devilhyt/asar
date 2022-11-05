@@ -1,7 +1,7 @@
-# the default Docker image
+# builder stage
 FROM python:3.8-bullseye AS builder
 
-# install dependencies. Use Numpy v1.19.5 to build matplotlib.
+# install packages.
 COPY ./build/package /build/package
 RUN set -eux; \
         python -m venv /opt/venv; \
@@ -23,12 +23,11 @@ RUN set -eux; \
             tokenizers==0.10.2 \
         ;
 
-# start a new build stage
+# release stage
 FROM python:3.8-bullseye
 
+# python venv
 COPY --from=builder /opt/venv /opt/venv
-
-# use venv
 ENV PATH="/opt/venv/bin:$PATH"
 
 # set HOME
