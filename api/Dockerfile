@@ -15,15 +15,24 @@ RUN set -eux; \
             -r requirements.txt \
         ;
 
-# start a new build stage
 FROM python:3.10-bullseye
 
 COPY --from=builder /opt/venv /opt/venv
 ENV PATH="/opt/venv/bin:$PATH"
 
-RUN mkdir -p /data
+COPY ./app /app
+
+RUN mkdir -p /actions /data
+VOLUME ["/actions", "/data"]
+
+ENV RASA_API_PROTOCOL=http \
+    RASA_API_HOST=app \
+    RASA_API_PORT=5005 \
+    ASAR_API_PROTOCOL=http \
+    ASAR_API_HOST=api \
+    ASAR_API_PORT=5500 \
+    RASA_ACTIONS_ROOT=/actions
 
 WORKDIR /app
-
 ENTRYPOINT [ "gunicorn" ]
-CMD ["-h"]
+CMD ["--bind=0.0.0.0:5500", "--worker-class=gthread", "--workers=1", "--threads=4", "asar_api:create_app()" ]

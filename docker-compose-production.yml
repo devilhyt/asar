@@ -1,0 +1,54 @@
+version: "3.8"
+
+networks:
+  default:
+    name: asar-prod
+
+volumes:
+  app:
+  actions:
+  data:
+
+services:
+  app:
+    image: rasa:custom
+    volumes:
+      - app:/app
+      - data:/data
+    ports:
+      - 5005:5005
+
+  action:
+    image: rasa-sdk:custom
+    volumes:
+      - actions:/app/actions
+    ports:
+      - 5055:5055
+    privileged: true
+
+  api:
+    image: asar-api:latest
+    volumes:
+      - actions:/actions
+      - data:/data
+    environment:
+      SECRET_KEY:
+      RASA_API_HOST: app
+      ASAR_API_HOST: api
+    ports:
+      - 5500:5500
+
+  web:
+    image: asar-web:latest
+    environment:
+      ASAR_API_HOST: api
+    ports:
+      - 80:80
+    depends_on:
+      - api
+
+  tunnel:
+    image: cloudflare/cloudflared:latest
+    command: "tunnel --no-autoupdate run"
+    environment:
+      TUNNEL_TOKEN:

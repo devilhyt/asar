@@ -29,8 +29,8 @@ RUN set -eux; \
             -r requirements.txt \
         ;
 
-# Copy actions folder to working directory
-# COPY ./actions /app/actions
 
-# By best practices, don't run the code with root user
-# USER 1001
+# Copy actions folder to working directory
+COPY ./app/actions /app/actions
+
+CMD ["start", "--actions=actions", "--auto-reload"]

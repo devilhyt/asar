@@ -1,8 +1,8 @@
 FROM rasa:base
 
 RUN rm -rf /opt/venv/lib/python3.8/site-packages/rasa/cli/initial_project
-
 COPY ./build/initial_project_zh /opt/venv/lib/python3.8/site-packages/rasa/cli/initial_project
+COPY ./build/initial_project_zh /app
 
 # Update Numpy version to run ckip-transformers.
 RUN set -eux; \
@@ -10,3 +10,6 @@ RUN set -eux; \
             numpy \
             ckip-transformers \
         ;
+
+VOLUME ["/app", "/data"]
+CMD ["run", "--enable-api"]

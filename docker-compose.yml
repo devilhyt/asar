@@ -1,18 +1,17 @@
 version: "3.8"
 
 networks:
-  rasa:
+  default:
+    name: asar-dev
 
 services:
   app:
     container_name: app
     image: rasa:custom
-    command: "run -vv --enable-api"
+    command: ["run", "-vv", "--enable-api"]
     volumes:
       - ./rasa/app:/app
       - ./api/data:/data
-    networks:
-      - rasa
     ports:
       - 5005:5005
     restart: unless-stopped
@@ -20,12 +19,10 @@ services:
   action:
     container_name: action
     image: rasa-sdk:custom
-    command: "start --actions actions --auto-reload"
+    command: ["start", "--actions=actions", "--auto-reload"]
     privileged: true
     volumes:
       - ./rasa/app/actions:/app/actions
-    networks:
-      - rasa
     ports:
       - 5055:5055
     restart: unless-stopped
@@ -48,7 +45,7 @@ services:
     volumes:
       - ./api/app:/app
       - ./api/data:/data
-      - ./rasa/app:/rasa-app
+      - ./rasa/app/actions:/actions
     environment:
       SECRET_KEY:
       RASA_API_PROTOCOL: http
@@ -57,9 +54,7 @@ services:
       ASAR_API_PROTOCOL: http
       ASAR_API_HOST: api
       ASAR_API_PORT: 5500
-      RASA_APP_ROOT: /rasa-app
-    networks:
-      - rasa
+      RASA_ACTIONS_ROOT: /actions
     ports:
       - 5500:5500
     restart: unless-stopped
@@ -71,8 +66,6 @@ services:
       ASAR_API_PROTOCOL: http
       ASAR_API_HOST: api
       ASAR_API_PORT: 5500
-    networks:
-      - rasa
     ports:
       - 80:80
     depends_on:
@@ -85,8 +78,6 @@ services:
     command: "tunnel --no-autoupdate run"
     environment:
       TUNNEL_TOKEN:
-    networks:
-      - rasa
     restart: unless-stopped
 
 # docker run -it --rm -v $(pwd)/rasa/app:/app rasa:base init
