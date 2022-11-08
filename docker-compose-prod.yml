@@ -1,16 +1,16 @@
 version: "3.8"
 
-networks:
+networks: # 設定專屬Asar的Docker network
   default:
     name: asar-prod
 
 volumes:
-  app:
-  actions:
-  data:
+  app:     # 存放聊天機器人服務的資料
+  actions: # 存放動作代理服務的資料
+  data:    # 存放後端API服務的資料
 
 services:
-  app:
+  app: # 聊天機器人服務
     image: rasa:custom
     volumes:
       - app:/app
@@ -18,7 +18,7 @@ services:
     ports:
       - 5005:5005
 
-  action:
+  action: # 動作代理服務
     image: rasa-sdk:custom
     volumes:
       - actions:/app/actions
@@ -26,22 +26,24 @@ services:
       - 5055:5055
     privileged: true
 
-  api:
+  api: # 後端API服務
     image: asar-api:latest
     volumes:
       - actions:/actions
       - data:/data
     environment:
-      SECRET_KEY:
-      RASA_API_HOST: app
-      ASAR_API_HOST: api
+      SECRET_KEY: # Flask密鑰
+      # 密鑰可用此指令生成
+      # python -c 'import secrets; print(secrets.token_hex())'
+      RASA_API_HOST: app # 聊天機器人服務的別名
+      ASAR_API_HOST: api # 後端API服務的別名
     ports:
       - 5500:5500
 
-  web:
+  web: # 前端網頁服務
     image: asar-web:latest
     environment:
-      ASAR_API_HOST: api
+      ASAR_API_HOST: api # 後端API服務的別名
     ports:
       - 80:80
     depends_on:
