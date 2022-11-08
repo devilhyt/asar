@@ -12,8 +12,14 @@ server {
         proxy_pass   ${ASAR_API_PROTOCOL}://${ASAR_API_HOST}:${ASAR_API_PORT}/;
     }
 
+    location /rasa/ {
+        proxy_pass   ${RASA_API_PROTOCOL}://${RASA_API_HOST}:${RASA_API_PORT}/;
+    }
+
     error_page   500 502 503 504  /50x.html;
     location = /50x.html {
         root   html;
     }
   }
+
+  
