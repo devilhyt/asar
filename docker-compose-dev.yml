@@ -5,8 +5,8 @@ networks:
     name: asar-dev
 
 services:
-  app:
-    container_name: app
+  rasa:
+    container_name: rasa
     image: rasa:custom
     command: ["run", "-vv", "--enable-api", '--cors="*"']
     volumes:
@@ -49,7 +49,7 @@ services:
     environment:
       SECRET_KEY:
       RASA_API_PROTOCOL: http
-      RASA_API_HOST: app
+      RASA_API_HOST: rasa
       RASA_API_PORT: 5005
       ASAR_API_PROTOCOL: http
       ASAR_API_HOST: api

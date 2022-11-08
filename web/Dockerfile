@@ -10,7 +10,11 @@ RUN mkdir /app
 COPY --from=builder /app/dist /app
 COPY ./templates /etc/nginx/templates
 ENV NGINX_PORT=80 \
+    RASA_API_PROTOCOL=http \
+    RASA_API_HOST=rasa \
+    RASA_API_PORT=5005 \
     ASAR_API_PROTOCOL=http \
     ASAR_API_HOST=api \
     ASAR_API_PORT=5500
+
 

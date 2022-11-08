@@ -26,7 +26,7 @@ RUN mkdir -p /actions /data
 VOLUME ["/actions", "/data"]
 
 ENV RASA_API_PROTOCOL=http \
-    RASA_API_HOST=app \
+    RASA_API_HOST=rasa \
     RASA_API_PORT=5005 \
     ASAR_API_PROTOCOL=http \
     ASAR_API_HOST=api \
