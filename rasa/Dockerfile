@@ -52,4 +52,4 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 # the entry point
 EXPOSE 5005
 ENTRYPOINT ["rasa"]
-CMD ["run", "--enable-api"]
+CMD ["run", "--enable-api", '--cors="*"']
