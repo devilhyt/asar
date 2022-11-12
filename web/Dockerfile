@@ -1,4 +1,4 @@
-FROM node:lts-bullseye AS builder
+FROM node:16-bullseye AS builder
 COPY ./app /app
 WORKDIR /app
 RUN set -eux; \

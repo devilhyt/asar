@@ -63,8 +63,6 @@ services:
   web:
     container_name: web
     image: asar-web:latest
-    volumes:
-      - ./web/scenarios:/app/scenarios
     environment:
       RASA_API_PROTOCOL: http
       RASA_API_HOST: rasa
