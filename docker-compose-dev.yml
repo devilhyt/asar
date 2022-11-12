@@ -55,6 +55,12 @@ services:
       ASAR_API_PROTOCOL: http
       ASAR_API_HOST: api
       ASAR_API_PORT: 5500
+      RASA_API_AGENT_PROTOCOL: http
+      RASA_API_AGENT_HOST: "192.168.0.8"
+      RASA_API_AGENT_PORT: 5005
+      ASAR_API_AGENT_PROTOCOL: http
+      ASAR_API_AGENT_HOST: "raspberrypi"
+      ASAR_API_AGENT_PORT: 5500
       RASA_ACTIONS_ROOT: /actions
     ports:
       - 5500:5500
