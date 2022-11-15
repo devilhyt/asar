@@ -25,6 +25,7 @@ RUN set -eux; \
         pip install -U --no-cache-dir \
             numpy \
             ckip-transformers \
+            line-bot-sdk \
         ;
 
 # release stage

@@ -2,3 +2,4 @@ RPi.GPIO
 RPLCD
 smbus2
 dht11
+requests

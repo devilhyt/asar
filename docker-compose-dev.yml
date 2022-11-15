@@ -23,7 +23,6 @@ services:
     privileged: true
     volumes:
       - ./rasa/app/actions:/app/actions
-      - ./web/scenarios:/app/scenarios
     ports:
       - 5055:5055
     restart: unless-stopped

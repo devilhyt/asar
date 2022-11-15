@@ -216,3 +216,4 @@ cython_debug/
 api/data
 rasa/app
 !rasa/build
+rasa/build/initial_project_zh/custom_connectors/line_connector.py
