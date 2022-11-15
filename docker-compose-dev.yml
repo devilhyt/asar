@@ -88,5 +88,3 @@ services:
     environment:
       TUNNEL_TOKEN:
     restart: unless-stopped
-
-# docker run -it --rm -v $(pwd)/rasa/app:/app rasa:base init

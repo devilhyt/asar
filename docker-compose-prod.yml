@@ -43,6 +43,7 @@ services:
   web: # 前端網頁服務
     image: asar-web:latest
     environment:
+      RASA_API_HOST: rasa # 聊天機器人服務的別名
       ASAR_API_HOST: api # 後端API服務的別名
     ports:
       - 80:80
