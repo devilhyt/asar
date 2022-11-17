@@ -13,6 +13,3 @@
 [submodule "rasa/build/initial_project_zh/custom_components/models/albert-base-chinese-ner"]
 	path = rasa/build/initial_project_zh/custom_components/models/albert-base-chinese-ner
 	url = https://huggingface.co/ckiplab/albert-base-chinese-ner
-[submodule "rasa/build/initial_project_zh/custom_components/models/base-base-chinese"]
-	path = rasa/build/initial_project_zh/custom_components/models/base-base-chinese
-	url = https://huggingface.co/bert-base-chinese

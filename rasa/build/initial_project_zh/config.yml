@@ -17,14 +17,14 @@ pipeline:
 #   # use match word boundaries for lookup table
 #   use_word_boundaries: False
 - name: LexicalSyntacticFeaturizer
-# - name: CountVectorsFeaturizer
-# - name: CountVectorsFeaturizer
-#   analyzer: char_wb
-#   min_ngram: 1
-#   max_ngram: 4
-- name: LanguageModelFeaturizer
-  model_name: "bert"
-  model_weights: "./custom_components/models/bert-base-chinese"
+- name: CountVectorsFeaturizer
+- name: CountVectorsFeaturizer
+  analyzer: char_wb
+  min_ngram: 1
+  max_ngram: 4
+# - name: LanguageModelFeaturizer
+#   model_name: "bert"
+#   model_weights: "./custom_components/models/bert-base-chinese"
 - name: custom_components.ckip_transformers_extractor.CkipTransformersExtractor
   model_name: "./custom_components/models/albert-base-chinese-ner"
   show_progress: false
