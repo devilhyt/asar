@@ -43,7 +43,7 @@ services:
         "asar_api:create_app()",
       ]
     volumes:
-      - ./asar-data/app:/app
+      - ./api/app:/app
       - ./asar-data/data:/data
       - ./asar-data/app/actions:/actions
     environment:
