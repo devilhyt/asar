@@ -11,19 +11,22 @@ pipeline:
 # # If you'd like to customize it, uncomment and adjust the pipeline.
 # # See https://rasa.com/docs/rasa/tuning-your-model for more information.
 - name: custom_components.ckip_transformers_tokenizer.CkipTransformersTokenizer
-  model_name: "./custom_components/albert-base-chinese-ws"
+  model_name: "./custom_components/models/albert-base-chinese-ws"
   show_progress: false
-- name: RegexFeaturizer
-  # use match word boundaries for lookup table
-  use_word_boundaries: False
+# - name: RegexFeaturizer
+#   # use match word boundaries for lookup table
+#   use_word_boundaries: False
 - name: LexicalSyntacticFeaturizer
-- name: CountVectorsFeaturizer
-- name: CountVectorsFeaturizer
-  analyzer: char_wb
-  min_ngram: 1
-  max_ngram: 4
+# - name: CountVectorsFeaturizer
+# - name: CountVectorsFeaturizer
+#   analyzer: char_wb
+#   min_ngram: 1
+#   max_ngram: 4
+- name: LanguageModelFeaturizer
+  model_name: "bert"
+  model_weights: "./custom_components/models/bert-base-chinese"
 - name: custom_components.ckip_transformers_extractor.CkipTransformersExtractor
-  model_name: "./custom_components/albert-base-chinese-ner"
+  model_name: "./custom_components/models/albert-base-chinese-ner"
   show_progress: false
   dimensions:
 - name: custom_components.diet_classifier.DIETClassifier
@@ -31,10 +34,9 @@ pipeline:
   # sigmoid cross entropy loss
   constrain_similarities: true
   dimensions:
-- name: RegexEntityExtractor
-  # use match word boundaries for lookup table
-  use_word_boundaries: False
-  # When using the EntitySynonymMapper as part of an NLU pipeline, it will need to be placed below any entity extractors in the configuration file.
+# - name: RegexEntityExtractor
+#   # use match word boundaries for lookup table
+#   use_word_boundaries: False
 - name: EntitySynonymMapper
 - name: ResponseSelector
   epochs: 100
@@ -43,7 +45,6 @@ pipeline:
 - name: FallbackClassifier
   threshold: 0.3
   ambiguity_threshold: 0.1
-# - name: custom_components.printer.Printer
 
 # Configuration for Rasa Core.
 # https://rasa.com/docs/rasa/core/policies/

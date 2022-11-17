@@ -213,7 +213,6 @@ cython_debug/
 
 
 # custom
-api/data
-rasa/app
+asar-data
 !rasa/build
 rasa/build/initial_project_zh/custom_connectors/line_connector.py

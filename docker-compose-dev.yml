@@ -10,8 +10,8 @@ services:
     image: rasa:custom
     command: ["run", "-vv", "--enable-api", '--cors="*"']
     volumes:
-      - ./rasa/app:/app
-      - ./api/data:/data
+      - ./asar-data/app:/app
+      - ./asar-data/data:/data
     ports:
       - 5005:5005
     restart: unless-stopped
@@ -22,7 +22,7 @@ services:
     command: ["start", "--actions=actions", "--auto-reload"]
     privileged: true
     volumes:
-      - ./rasa/app/actions:/app/actions
+      - ./asar-data/app/actions:/app/actions
     ports:
       - 5055:5055
     restart: unless-stopped
@@ -43,9 +43,9 @@ services:
         "asar_api:create_app()",
       ]
     volumes:
-      - ./api/app:/app
-      - ./api/data:/data
-      - ./rasa/app/actions:/actions
+      - ./asar-data/app:/app
+      - ./asar-data/data:/data
+      - ./asar-data/app/actions:/actions
     environment:
       SECRET_KEY:
       RASA_API_PROTOCOL: http
