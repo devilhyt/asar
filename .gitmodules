@@ -7,3 +7,12 @@
 [submodule "rasa-sdk/rasa-sdk"]
 	path = rasa-sdk/rasa-sdk
 	url = https://github.com/RasaHQ/rasa-sdk.git
+[submodule "rasa/build/initial_project_zh/custom_components/models/albert-base-chinese-ws"]
+	path = rasa/build/initial_project_zh/custom_components/models/albert-base-chinese-ws
+	url = https://huggingface.co/ckiplab/albert-base-chinese-ws
+[submodule "rasa/build/initial_project_zh/custom_components/models/albert-base-chinese-ner"]
+	path = rasa/build/initial_project_zh/custom_components/models/albert-base-chinese-ner
+	url = https://huggingface.co/ckiplab/albert-base-chinese-ner
+[submodule "rasa/build/initial_project_zh/custom_components/models/base-base-chinese"]
+	path = rasa/build/initial_project_zh/custom_components/models/base-base-chinese
+	url = https://huggingface.co/bert-base-chinese
