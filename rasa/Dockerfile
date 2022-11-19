@@ -36,8 +36,6 @@ COPY --from=builder /opt/venv /opt/venv
 ENV PATH="/opt/venv/bin:$PATH"
 
 # replace initial project
-# RUN rm -rf /opt/venv/lib/python3.8/site-packages/rasa/cli/initial_project
-# COPY ./build/initial_project_zh /opt/venv/lib/python3.8/site-packages/rasa/cli/initial_project
 COPY ./build/initial_project_zh /app
 
 # set HOME
