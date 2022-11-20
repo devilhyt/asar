@@ -64,6 +64,8 @@ services:
     ports:
       - 5500:5500
     restart: unless-stopped
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
 
   web:
     container_name: web
