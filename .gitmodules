@@ -16,3 +16,4 @@
 [submodule "rasa/build/initial_project_zh/custom_components/models/bert-base-chinese"]
 	path = rasa/build/initial_project_zh/custom_components/models/bert-base-chinese
 	url = https://huggingface.co/bert-base-chinese
+	shallow = true
