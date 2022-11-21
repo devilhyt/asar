@@ -5,7 +5,7 @@ RUN set -eux; \
         npm install; \
         npm run build;
 
-FROM nginx:latest AS release
+FROM nginx:stable AS release
 RUN mkdir /app
 COPY --from=builder /app/dist /app
 COPY ./templates /etc/nginx/templates
