@@ -13,6 +13,9 @@ pipeline:
 - name: custom_components.ckip_transformers_tokenizer.CkipTransformersTokenizer
   model_name: "./custom_components/models/albert-base-chinese-ws"
   show_progress: false
+- name: LanguageModelFeaturizer
+  model_name: "bert"
+  model_weights: "./custom_components/models/bert-base-chinese"
 # - name: RegexFeaturizer
 #   # use match word boundaries for lookup table
 #   use_word_boundaries: False
@@ -22,9 +25,6 @@ pipeline:
 #   analyzer: char_wb
 #   min_ngram: 1
 #   max_ngram: 4
-- name: LanguageModelFeaturizer
-  model_name: "bert"
-  model_weights: "./custom_components/models/bert-base-chinese"
 - name: custom_components.ckip_transformers_extractor.CkipTransformersExtractor
   model_name: "./custom_components/models/albert-base-chinese-ner"
   show_progress: false
@@ -52,15 +52,15 @@ policies:
 # # No configuration for policies was provided. The following default policies were used to train your model.
 # # If you'd like to customize them, uncomment and adjust the policies.
 # # See https://rasa.com/docs/rasa/policies for more information.
-- name: MemoizationPolicy
+- name: AugmentedMemoizationPolicy
 - name: RulePolicy
+  # core_fallback_threshold: 0.3
   enable_fallback_prediction: false
-- name: UnexpecTEDIntentPolicy
-  max_history: 5
-  epochs: 100
+# - name: UnexpecTEDIntentPolicy
+#   max_history: 5
+#   epochs: 100
 - name: TEDPolicy
   max_history: 5
   epochs: 100
   # sigmoid cross entropy loss
   constrain_similarities: true
-  
