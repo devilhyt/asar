@@ -15,7 +15,7 @@ RUN set -eux; \
             -r requirements.txt \
         ;
 
-FROM python:3.10-bullseye AS release
+FROM python:3.10-slim-bullseye AS release
 
 COPY --from=builder /opt/venv /opt/venv
 ENV PATH="/opt/venv/bin:$PATH"

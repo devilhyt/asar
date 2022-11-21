@@ -29,7 +29,7 @@ RUN set -eux; \
         ;
 
 # release stage
-FROM python:3.8-bullseye AS release
+FROM python:3.8-slim-bullseye AS release
 
 # python venv
 COPY --from=builder /opt/venv /opt/venv
