@@ -7,7 +7,7 @@ networks:
 services:
   rasa:
     container_name: rasa
-    image: rasa:custom
+    image: devilhyt/rasa:custom
     command: ["run", "-vv", "--enable-api", '--cors="*"']
     volumes:
       - ./asar-data/app:/app
@@ -18,7 +18,7 @@ services:
 
   action:
     container_name: action
-    image: rasa-sdk:custom
+    image: devilhyt/rasa-sdk:custom
     command: ["start", "--actions=actions", "--auto-reload"]
     privileged: true
     volumes:
@@ -29,7 +29,7 @@ services:
 
   api:
     container_name: api
-    image: asar-api:latest
+    image: devilhyt/asar-api:latest
     command:
       [
         "--bind=0.0.0.0:5500",
@@ -69,7 +69,7 @@ services:
 
   web:
     container_name: web
-    image: asar-web:latest
+    image: devilhyt/asar-web:latest
     environment:
       RASA_API_PROTOCOL: http
       RASA_API_HOST: rasa
