@@ -1,9 +1,6 @@
 [submodule "api/app"]
 	path = api/app
 	url = https://github.com/devilhyt/asar-api.git
-[submodule "web/app"]
-	path = web/app
-	url = https://github.com/Paxton90/asar-app.git
 [submodule "rasa-sdk/rasa-sdk"]
 	path = rasa-sdk/rasa-sdk
 	url = https://github.com/RasaHQ/rasa-sdk.git
@@ -17,3 +14,6 @@
 	path = rasa/build/initial_project_zh/custom_components/models/bert-base-chinese
 	url = https://huggingface.co/bert-base-chinese
 	shallow = true
+[submodule "web/app"]
+	path = web/app
+	url = https://github.com/devilhyt/asar-web.git
