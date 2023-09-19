@@ -1,5 +1,5 @@
-RPi.GPIO
-RPLCD
-smbus2
-dht11
+RPi.GPIO; platform_machine == 'aarch64' and platform_machine == 'arm64'
+RPLCD; platform_machine == 'aarch64' and platform_machine == 'arm64'
+smbus2; platform_machine == 'aarch64' and platform_machine == 'arm64'
+dht11; platform_machine == 'aarch64' and platform_machine == 'arm64'
 requests
