@@ -35,6 +35,8 @@ services:
       SECRET_KEY: # Flask密鑰
       # 密鑰可用此指令生成
       # python -c 'import secrets; print(secrets.token_hex())'
+      ASAR_USERNAME: admin # 管理員帳號
+      ASAR_PASSWORD: admin # 管理員密碼
       RASA_API_HOST: rasa # 聊天機器人服務的別名
       ASAR_API_HOST: api # 後端API服務的別名
     ports:
@@ -50,8 +52,8 @@ services:
     depends_on:
       - api
 
-  tunnel:
-    image: cloudflare/cloudflared:latest
-    command: "tunnel --no-autoupdate run"
-    environment:
-      TUNNEL_TOKEN:
+  # tunnel:
+  #   image: cloudflare/cloudflared:latest
+  #   command: "tunnel --no-autoupdate run"
+  #   environment:
+  #     TUNNEL_TOKEN:

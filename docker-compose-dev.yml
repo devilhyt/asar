@@ -48,18 +48,20 @@ services:
       - ./asar-data/app/actions:/actions
     environment:
       SECRET_KEY:
+      ASAR_USERNAME: admin
+      ASAR_PASSWORD: admin
       RASA_API_PROTOCOL: http
       RASA_API_HOST: rasa
       RASA_API_PORT: 5005
       ASAR_API_PROTOCOL: http
       ASAR_API_HOST: api
       ASAR_API_PORT: 5500
-      RASA_API_AGENT_PROTOCOL: http
-      RASA_API_AGENT_HOST: "192.168.0.8"
-      RASA_API_AGENT_PORT: 5005
-      ASAR_API_AGENT_PROTOCOL: http
-      ASAR_API_AGENT_HOST: "raspberrypi"
-      ASAR_API_AGENT_PORT: 5500
+      # RASA_API_AGENT_PROTOCOL: http
+      # RASA_API_AGENT_HOST: "192.168.0.8"
+      # RASA_API_AGENT_PORT: 5005
+      # ASAR_API_AGENT_PROTOCOL: http
+      # ASAR_API_AGENT_HOST: "raspberrypi"
+      # ASAR_API_AGENT_PORT: 5500
       RASA_ACTIONS_ROOT: /actions
     ports:
       - 5500:5500
@@ -83,10 +85,10 @@ services:
       - api
     restart: unless-stopped
 
-  tunnel:
-    container_name: tunnel
-    image: cloudflare/cloudflared:latest
-    command: "tunnel --no-autoupdate run"
-    environment:
-      TUNNEL_TOKEN:
-    restart: unless-stopped
+  # tunnel:
+  #   container_name: tunnel
+  #   image: cloudflare/cloudflared:latest
+  #   command: "tunnel --no-autoupdate run"
+  #   environment:
+  #     TUNNEL_TOKEN:
+  #   restart: unless-stopped
