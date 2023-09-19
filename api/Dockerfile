@@ -25,7 +25,9 @@ COPY ./app /app
 RUN mkdir -p /actions /data
 VOLUME ["/actions", "/data"]
 
-ENV RASA_API_PROTOCOL=http \
+ENV ASAR_USERNAME=admin \
+    ASAR_PASSWORD=admin \
+    RASA_API_PROTOCOL=http \
     RASA_API_HOST=rasa \
     RASA_API_PORT=5005 \
     ASAR_API_PROTOCOL=http \
