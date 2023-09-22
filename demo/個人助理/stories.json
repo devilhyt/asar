@@ -1,0 +1,1943 @@
+{
+    "問候": {
+        "position": [
+            586.7655989927666,
+            12.27055886499133
+        ],
+        "edges": [
+            {
+                "id": "vueflow__edge-startundefined_out-nzQlKZQaln45VbR2WHf95nzQlKZQaln45VbR2WHf95_in",
+                "source": "start",
+                "sourceHandle": "undefined_out",
+                "target": "nzQlKZQaln45VbR2WHf95",
+                "targetHandle": "nzQlKZQaln45VbR2WHf95_in",
+                "z": 0,
+                "sourceX": 0,
+                "sourceY": 0,
+                "targetX": 0,
+                "targetY": 0,
+                "sourceNode": {
+                    "type": "start",
+                    "dimensions": {
+                        "width": 180,
+                        "height": 39
+                    },
+                    "handleBounds": {
+                        "source": [
+                            {
+                                "id": "undefined_out",
+                                "position": "bottom",
+                                "x": 87.04167643343582,
+                                "y": 36.666654641518114,
+                                "width": 6,
+                                "height": 6
+                            }
+                        ]
+                    },
+                    "computedPosition": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0
+                    },
+                    "id": "start",
+                    "position": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "data": {
+                        "type": "start"
+                    }
+                },
+                "targetNode": {
+                    "type": "intent",
+                    "dimensions": {
+                        "width": 180,
+                        "height": 67
+                    },
+                    "handleBounds": {
+                        "source": [
+                            {
+                                "id": "nzQlKZQaln45VbR2WHf95_out",
+                                "position": "bottom",
+                                "x": 87.04167643343582,
+                                "y": 64.6666277976034,
+                                "width": 6,
+                                "height": 6
+                            }
+                        ],
+                        "target": [
+                            {
+                                "id": "nzQlKZQaln45VbR2WHf95_in",
+                                "position": "top",
+                                "x": 87.04167643343582,
+                                "y": -4.00000683943054,
+                                "width": 6,
+                                "height": 6
+                            }
+                        ]
+                    },
+                    "computedPosition": {
+                        "x": 0,
+                        "y": 54.61231085118567,
+                        "z": 0
+                    },
+                    "id": "nzQlKZQaln45VbR2WHf95",
+                    "data": {
+                        "type": "intent",
+                        "name": "問候",
+                        "entities": []
+                    },
+                    "position": {
+                        "x": 0,
+                        "y": 54.61231085118567
+                    },
+                    "selected": false
+                }
+            },
+            {
+                "id": "vueflow__edge-nzQlKZQaln45VbR2WHf95nzQlKZQaln45VbR2WHf95_out-b6m-_O6vV_i1bgQNJhwPIb6m-_O6vV_i1bgQNJhwPI_in",
+                "source": "nzQlKZQaln45VbR2WHf95",
+                "sourceHandle": "nzQlKZQaln45VbR2WHf95_out",
+                "target": "b6m-_O6vV_i1bgQNJhwPI",
+                "targetHandle": "b6m-_O6vV_i1bgQNJhwPI_in",
+                "z": 0,
+                "sourceX": 0,
+                "sourceY": 0,
+                "targetX": 0,
+                "targetY": 0,
+                "sourceNode": {
+                    "type": "intent",
+                    "dimensions": {
+                        "width": 180,
+                        "height": 67
+                    },
+                    "handleBounds": {
+                        "source": [
+                            {
+                                "id": "nzQlKZQaln45VbR2WHf95_out",
+                                "position": "bottom",
+                                "x": 87.04167643343582,
+                                "y": 64.6666277976034,
+                                "width": 6,
+                                "height": 6
+                            }
+                        ],
+                        "target": [
+                            {
+                                "id": "nzQlKZQaln45VbR2WHf95_in",
+                                "position": "top",
+                                "x": 87.04167643343582,
+                                "y": -4.00000683943054,
+                                "width": 6,
+                                "height": 6
+                            }
+                        ]
+                    },
+                    "computedPosition": {
+                        "x": 0,
+                        "y": 54.61231085118567,
+                        "z": 0
+                    },
+                    "id": "nzQlKZQaln45VbR2WHf95",
+                    "data": {
+                        "type": "intent",
+                        "name": "問候",
+                        "entities": []
+                    },
+                    "position": {
+                        "x": 0,
+                        "y": 54.61231085118567
+                    },
+                    "selected": false
+                },
+                "targetNode": {
+                    "type": "response",
+                    "dimensions": {
+                        "width": 180,
+                        "height": 67
+                    },
+                    "handleBounds": {
+                        "source": [
+                            {
+                                "id": "b6m-_O6vV_i1bgQNJhwPI_out",
+                                "position": "bottom",
+                                "x": 87.04167643343582,
+                                "y": 64.66664440203195,
+                                "width": 6,
+                                "height": 6
+                            }
+                        ],
+                        "target": [
+                            {
+                                "id": "b6m-_O6vV_i1bgQNJhwPI_in",
+                                "position": "top",
+                                "x": 87.04167643343582,
+                                "y": -3.999990235001983,
+                                "width": 6,
+                                "height": 6
+                            }
+                        ]
+                    },
+                    "computedPosition": {
+                        "x": -0.7987499999999983,
+                        "y": 137.24640953213427,
+                        "z": 0
+                    },
+                    "id": "b6m-_O6vV_i1bgQNJhwPI",
+                    "data": {
+                        "type": "response",
+                        "name": "問候"
+                    },
+                    "position": {
+                        "x": -0.7987499999999983,
+                        "y": 137.24640953213427
+                    },
+                    "selected": false
+                }
+            },
+            {
+                "id": "vueflow__edge-b6m-_O6vV_i1bgQNJhwPIb6m-_O6vV_i1bgQNJhwPI_out-_bKJllfUIzYhehZiFNUbn_bKJllfUIzYhehZiFNUbn_in",
+                "source": "b6m-_O6vV_i1bgQNJhwPI",
+                "sourceHandle": "b6m-_O6vV_i1bgQNJhwPI_out",
+                "target": "_bKJllfUIzYhehZiFNUbn",
+                "targetHandle": "_bKJllfUIzYhehZiFNUbn_in",
+                "z": 0,
+                "sourceX": 0,
+                "sourceY": 0,
+                "targetX": 0,
+                "targetY": 0,
+                "sourceNode": {
+                    "type": "response",
+                    "dimensions": {
+                        "width": 180,
+                        "height": 67
+                    },
+                    "handleBounds": {
+                        "source": [
+                            {
+                                "id": "b6m-_O6vV_i1bgQNJhwPI_out",
+                                "position": "bottom",
+                                "x": 87.04167643343582,
+                                "y": 64.66664440203195,
+                                "width": 6,
+                                "height": 6
+                            }
+                        ],
+                        "target": [
+                            {
+                                "id": "b6m-_O6vV_i1bgQNJhwPI_in",
+                                "position": "top",
+                                "x": 87.04167643343582,
+                                "y": -3.999990235001983,
+                                "width": 6,
+                                "height": 6
+                            }
+                        ]
+                    },
+                    "computedPosition": {
+                        "x": -0.7987499999999983,
+                        "y": 137.24640953213427,
+                        "z": 0
+                    },
+                    "id": "b6m-_O6vV_i1bgQNJhwPI",
+                    "data": {
+                        "type": "response",
+                        "name": "問候"
+                    },
+                    "position": {
+                        "x": -0.7987499999999983,
+                        "y": 137.24640953213427
+                    },
+                    "selected": false
+                },
+                "targetNode": {
+                    "type": "response",
+                    "dimensions": {
+                        "width": 180,
+                        "height": 67
+                    },
+                    "handleBounds": {
+                        "source": [
+                            {
+                                "id": "_bKJllfUIzYhehZiFNUbn_out",
+                                "position": "bottom",
+                                "x": 87.04154359800737,
+                                "y": 64.66667761088907,
+                                "width": 6,
+                                "height": 6
+                            }
+                        ],
+                        "target": [
+                            {
+                                "id": "_bKJllfUIzYhehZiFNUbn_in",
+                                "position": "top",
+                                "x": 87.04154359800737,
+                                "y": -3.999973630573426,
+                                "width": 6,
+                                "height": 6
+                            }
+                        ]
+                    },
+                    "computedPosition": {
+                        "x": -2.7049128297628755,
+                        "y": 217.7929210428457,
+                        "z": 0
+                    },
+                    "id": "_bKJllfUIzYhehZiFNUbn",
+                    "data": {
+                        "type": "response",
+                        "name": "問心情"
+                    },
+                    "position": {
+                        "x": -2.7049128297628755,
+                        "y": 217.7929210428457
+                    },
+                    "selected": false
+                }
+            },
+            {
+                "id": "vueflow__edge-_bKJllfUIzYhehZiFNUbn_bKJllfUIzYhehZiFNUbn_out-X2yCsECwtXjzRYNB9GixoX2yCsECwtXjzRYNB9Gixo_in",
+                "source": "_bKJllfUIzYhehZiFNUbn",
+                "sourceHandle": "_bKJllfUIzYhehZiFNUbn_out",
+                "target": "X2yCsECwtXjzRYNB9Gixo",
+                "targetHandle": "X2yCsECwtXjzRYNB9Gixo_in",
+                "z": 0,
+                "sourceX": 0,
+                "sourceY": 0,
+                "targetX": 0,
+                "targetY": 0,
+                "sourceNode": {
+                    "type": "response",
+                    "dimensions": {
+                        "width": 180,
+                        "height": 67
+                    },
+                    "handleBounds": {
+                        "source": [
+                            {
+                                "id": "_bKJllfUIzYhehZiFNUbn_out",
+                                "position": "bottom",
+                                "x": 87.04154359800737,
+                                "y": 64.66667761088907,
+                                "width": 6,
+                                "height": 6
+                            }
+                        ],
+                        "target": [
+                            {
+                                "id": "_bKJllfUIzYhehZiFNUbn_in",
+                                "position": "top",
+                                "x": 87.04154359800737,
+                                "y": -3.999973630573426,
+                                "width": 6,
+                                "height": 6
+                            }
+                        ]
+                    },
+                    "computedPosition": {
+                        "x": -2.7049128297628755,
+                        "y": 217.7929210428457,
+                        "z": 0
+                    },
+                    "id": "_bKJllfUIzYhehZiFNUbn",
+                    "data": {
+                        "type": "response",
+                        "name": "問心情"
+                    },
+                    "position": {
+                        "x": -2.7049128297628755,
+                        "y": 217.7929210428457
+                    },
+                    "selected": false
+                },
+                "targetNode": {
+                    "type": "intent",
+                    "dimensions": {
+                        "width": 180,
+                        "height": 67
+                    },
+                    "handleBounds": {
+                        "source": [
+                            {
+                                "id": "X2yCsECwtXjzRYNB9Gixo_out",
+                                "position": "bottom",
+                                "x": 87.04167643343582,
+                                "y": 64.66661119317483,
+                                "width": 6,
+                                "height": 6
+                            }
+                        ],
+                        "target": [
+                            {
+                                "id": "X2yCsECwtXjzRYNB9Gixo_in",
+                                "position": "top",
+                                "x": 87.04167643343582,
+                                "y": -4.00000683943054,
+                                "width": 6,
+                                "height": 6
+                            }
+                        ]
+                    },
+                    "computedPosition": {
+                        "x": -97.44749999999999,
+                        "y": 304.3545113861735,
+                        "z": 0
+                    },
+                    "id": "X2yCsECwtXjzRYNB9Gixo",
+                    "data": {
+                        "type": "intent",
+                        "name": "心情好",
+                        "entities": []
+                    },
+                    "position": {
+                        "x": -97.44749999999999,
+                        "y": 304.3545113861735
+                    },
+                    "selected": false
+                }
+            },
+            {
+                "id": "vueflow__edge-_bKJllfUIzYhehZiFNUbn_bKJllfUIzYhehZiFNUbn_out-SoPNpOCwrQ6_XnK9MaYRsSoPNpOCwrQ6_XnK9MaYRs_in",
+                "source": "_bKJllfUIzYhehZiFNUbn",
+                "sourceHandle": "_bKJllfUIzYhehZiFNUbn_out",
+                "target": "SoPNpOCwrQ6_XnK9MaYRs",
+                "targetHandle": "SoPNpOCwrQ6_XnK9MaYRs_in",
+                "z": 0,
+                "sourceX": 0,
+                "sourceY": 0,
+                "targetX": 0,
+                "targetY": 0,
+                "sourceNode": {
+                    "type": "response",
+                    "dimensions": {
+                        "width": 180,
+                        "height": 67
+                    },
+                    "handleBounds": {
+                        "source": [
+                            {
+                                "id": "_bKJllfUIzYhehZiFNUbn_out",
+                                "position": "bottom",
+                                "x": 87.04154359800737,
+                                "y": 64.66667761088907,
+                                "width": 6,
+                                "height": 6
+                            }
+                        ],
+                        "target": [
+                            {
+                                "id": "_bKJllfUIzYhehZiFNUbn_in",
+                                "position": "top",
+                                "x": 87.04154359800737,
+                                "y": -3.999973630573426,
+                                "width": 6,
+                                "height": 6
+                            }
+                        ]
+                    },
+                    "computedPosition": {
+                        "x": -2.7049128297628755,
+                        "y": 217.7929210428457,
+                        "z": 0
+                    },
+                    "id": "_bKJllfUIzYhehZiFNUbn",
+                    "data": {
+                        "type": "response",
+                        "name": "問心情"
+                    },
+                    "position": {
+                        "x": -2.7049128297628755,
+                        "y": 217.7929210428457
+                    },
+                    "selected": false
+                },
+                "targetNode": {
+                    "type": "intent",
+                    "dimensions": {
+                        "width": 180,
+                        "height": 67
+                    },
+                    "handleBounds": {
+                        "source": [
+                            {
+                                "id": "SoPNpOCwrQ6_XnK9MaYRs_out",
+                                "position": "bottom",
+                                "x": 87.0416100157216,
+                                "y": 64.66661119317483,
+                                "width": 6,
+                                "height": 6
+                            }
+                        ],
+                        "target": [
+                            {
+                                "id": "SoPNpOCwrQ6_XnK9MaYRs_in",
+                                "position": "top",
+                                "x": 87.0416100157216,
+                                "y": -4.00000683943054,
+                                "width": 6,
+                                "height": 6
+                            }
+                        ]
+                    },
+                    "computedPosition": {
+                        "x": 184.68279187228288,
+                        "y": 304.3545113861734,
+                        "z": 0
+                    },
+                    "id": "SoPNpOCwrQ6_XnK9MaYRs",
+                    "data": {
+                        "type": "intent",
+                        "name": "心情差",
+                        "entities": []
+                    },
+                    "position": {
+                        "x": 184.68279187228288,
+                        "y": 304.3545113861734
+                    },
+                    "selected": false
+                }
+            },
+            {
+                "id": "vueflow__edge-X2yCsECwtXjzRYNB9GixoX2yCsECwtXjzRYNB9Gixo_out-fW6tAirYc9yBIUPzRTWa1fW6tAirYc9yBIUPzRTWa1_in",
+                "source": "X2yCsECwtXjzRYNB9Gixo",
+                "sourceHandle": "X2yCsECwtXjzRYNB9Gixo_out",
+                "target": "fW6tAirYc9yBIUPzRTWa1",
+                "targetHandle": "fW6tAirYc9yBIUPzRTWa1_in",
+                "z": 0,
+                "sourceX": 0,
+                "sourceY": 0,
+                "targetX": 0,
+                "targetY": 0,
+                "sourceNode": {
+                    "type": "intent",
+                    "dimensions": {
+                        "width": 180,
+                        "height": 67
+                    },
+                    "handleBounds": {
+                        "source": [
+                            {
+                                "id": "X2yCsECwtXjzRYNB9Gixo_out",
+                                "position": "bottom",
+                                "x": 87.04167643343582,
+                                "y": 64.66661119317483,
+                                "width": 6,
+                                "height": 6
+                            }
+                        ],
+                        "target": [
+                            {
+                                "id": "X2yCsECwtXjzRYNB9Gixo_in",
+                                "position": "top",
+                                "x": 87.04167643343582,
+                                "y": -4.00000683943054,
+                                "width": 6,
+                                "height": 6
+                            }
+                        ]
+                    },
+                    "computedPosition": {
+                        "x": -97.44749999999999,
+                        "y": 304.3545113861735,
+                        "z": 0
+                    },
+                    "id": "X2yCsECwtXjzRYNB9Gixo",
+                    "data": {
+                        "type": "intent",
+                        "name": "心情好",
+                        "entities": []
+                    },
+                    "position": {
+                        "x": -97.44749999999999,
+                        "y": 304.3545113861735
+                    },
+                    "selected": false
+                },
+                "targetNode": {
+                    "type": "response",
+                    "dimensions": {
+                        "width": 180,
+                        "height": 67
+                    },
+                    "handleBounds": {
+                        "source": [
+                            {
+                                "id": "fW6tAirYc9yBIUPzRTWa1_out",
+                                "position": "bottom",
+                                "x": 87.0416100157216,
+                                "y": 64.66661119317483,
+                                "width": 6,
+                                "height": 6
+                            }
+                        ],
+                        "target": [
+                            {
+                                "id": "fW6tAirYc9yBIUPzRTWa1_in",
+                                "position": "top",
+                                "x": 87.0416100157216,
+                                "y": -4.000139674858998,
+                                "width": 6,
+                                "height": 6
+                            }
+                        ]
+                    },
+                    "computedPosition": {
+                        "x": -94.54083611254032,
+                        "y": 644.3584940274329,
+                        "z": 0
+                    },
+                    "id": "fW6tAirYc9yBIUPzRTWa1",
+                    "data": {
+                        "type": "response",
+                        "name": "心情好"
+                    },
+                    "position": {
+                        "x": -94.54083611254032,
+                        "y": 644.3584940274329
+                    },
+                    "selected": false
+                }
+            },
+            {
+                "id": "vueflow__edge-fW6tAirYc9yBIUPzRTWa1fW6tAirYc9yBIUPzRTWa1_out-endundefined_in",
+                "source": "fW6tAirYc9yBIUPzRTWa1",
+                "sourceHandle": "fW6tAirYc9yBIUPzRTWa1_out",
+                "target": "end",
+                "targetHandle": "undefined_in",
+                "z": 0,
+                "sourceX": 0,
+                "sourceY": 0,
+                "targetX": 0,
+                "targetY": 0,
+                "sourceNode": {
+                    "type": "response",
+                    "dimensions": {
+                        "width": 180,
+                        "height": 67
+                    },
+                    "handleBounds": {
+                        "source": [
+                            {
+                                "id": "fW6tAirYc9yBIUPzRTWa1_out",
+                                "position": "bottom",
+                                "x": 87.0416100157216,
+                                "y": 64.66661119317483,
+                                "width": 6,
+                                "height": 6
+                            }
+                        ],
+                        "target": [
+                            {
+                                "id": "fW6tAirYc9yBIUPzRTWa1_in",
+                                "position": "top",
+                                "x": 87.0416100157216,
+                                "y": -4.000139674858998,
+                                "width": 6,
+                                "height": 6
+                            }
+                        ]
+                    },
+                    "computedPosition": {
+                        "x": -94.54083611254032,
+                        "y": 644.3584940274329,
+                        "z": 0
+                    },
+                    "id": "fW6tAirYc9yBIUPzRTWa1",
+                    "data": {
+                        "type": "response",
+                        "name": "心情好"
+                    },
+                    "position": {
+                        "x": -94.54083611254032,
+                        "y": 644.3584940274329
+                    },
+                    "selected": false
+                },
+                "targetNode": {
+                    "type": "end",
+                    "dimensions": {
+                        "width": 180,
+                        "height": 39
+                    },
+                    "handleBounds": {
+                        "target": [
+                            {
+                                "id": "undefined_in",
+                                "position": "top",
+                                "x": 87.04167643343582,
+                                "y": -4.00000683943054,
+                                "width": 6,
+                                "height": 6
+                            }
+                        ]
+                    },
+                    "computedPosition": {
+                        "x": -13.18805033619418,
+                        "y": 746.1556963018637,
+                        "z": 0
+                    },
+                    "id": "end",
+                    "data": {
+                        "type": "end"
+                    },
+                    "position": {
+                        "x": -13.18805033619418,
+                        "y": 746.1556963018637
+                    },
+                    "selected": false
+                }
+            },
+            {
+                "id": "vueflow__edge-SoPNpOCwrQ6_XnK9MaYRsSoPNpOCwrQ6_XnK9MaYRs_out-wmFACt7ZJCXiboXJdripSwmFACt7ZJCXiboXJdripS_in",
+                "source": "SoPNpOCwrQ6_XnK9MaYRs",
+                "sourceHandle": "SoPNpOCwrQ6_XnK9MaYRs_out",
+                "target": "wmFACt7ZJCXiboXJdripS",
+                "targetHandle": "wmFACt7ZJCXiboXJdripS_in",
+                "z": 0,
+                "sourceX": 0,
+                "sourceY": 0,
+                "targetX": 0,
+                "targetY": 0,
+                "sourceNode": {
+                    "type": "intent",
+                    "dimensions": {
+                        "width": 180,
+                        "height": 67
+                    },
+                    "handleBounds": {
+                        "source": [
+                            {
+                                "id": "SoPNpOCwrQ6_XnK9MaYRs_out",
+                                "position": "bottom",
+                                "x": 87.0416100157216,
+                                "y": 64.66661119317483,
+                                "width": 6,
+                                "height": 6
+                            }
+                        ],
+                        "target": [
+                            {
+                                "id": "SoPNpOCwrQ6_XnK9MaYRs_in",
+                                "position": "top",
+                                "x": 87.0416100157216,
+                                "y": -4.00000683943054,
+                                "width": 6,
+                                "height": 6
+                            }
+                        ]
+                    },
+                    "computedPosition": {
+                        "x": 184.68279187228288,
+                        "y": 304.3545113861734,
+                        "z": 0
+                    },
+                    "id": "SoPNpOCwrQ6_XnK9MaYRs",
+                    "data": {
+                        "type": "intent",
+                        "name": "心情差",
+                        "entities": []
+                    },
+                    "position": {
+                        "x": 184.68279187228288,
+                        "y": 304.3545113861734
+                    },
+                    "selected": false
+                },
+                "targetNode": {
+                    "type": "response",
+                    "dimensions": {
+                        "width": 180,
+                        "height": 67
+                    },
+                    "handleBounds": {
+                        "source": [
+                            {
+                                "id": "wmFACt7ZJCXiboXJdripS_out",
+                                "position": "bottom",
+                                "x": 87.04167643343582,
+                                "y": 64.66667761088907,
+                                "width": 6,
+                                "height": 6
+                            }
+                        ],
+                        "target": [
+                            {
+                                "id": "wmFACt7ZJCXiboXJdripS_in",
+                                "position": "top",
+                                "x": 87.04167643343582,
+                                "y": -4.00000683943054,
+                                "width": 6,
+                                "height": 6
+                            }
+                        ]
+                    },
+                    "computedPosition": {
+                        "x": 184.99145470204573,
+                        "y": 389.6603937280744,
+                        "z": 0
+                    },
+                    "id": "wmFACt7ZJCXiboXJdripS",
+                    "data": {
+                        "type": "response",
+                        "name": "協助改善心情"
+                    },
+                    "position": {
+                        "x": 184.99145470204573,
+                        "y": 389.6603937280744
+                    },
+                    "selected": false
+                }
+            },
+            {
+                "id": "vueflow__edge-wmFACt7ZJCXiboXJdripSwmFACt7ZJCXiboXJdripS_out-7jv41v9qIfQrn_8npK_kd7jv41v9qIfQrn_8npK_kd_in",
+                "source": "wmFACt7ZJCXiboXJdripS",
+                "sourceHandle": "wmFACt7ZJCXiboXJdripS_out",
+                "target": "7jv41v9qIfQrn_8npK_kd",
+                "targetHandle": "7jv41v9qIfQrn_8npK_kd_in",
+                "z": 0,
+                "sourceX": 0,
+                "sourceY": 0,
+                "targetX": 0,
+                "targetY": 0,
+                "sourceNode": {
+                    "type": "response",
+                    "dimensions": {
+                        "width": 180,
+                        "height": 67
+                    },
+                    "handleBounds": {
+                        "source": [
+                            {
+                                "id": "wmFACt7ZJCXiboXJdripS_out",
+                                "position": "bottom",
+                                "x": 87.04167643343582,
+                                "y": 64.66667761088907,
+                                "width": 6,
+                                "height": 6
+                            }
+                        ],
+                        "target": [
+                            {
+                                "id": "wmFACt7ZJCXiboXJdripS_in",
+                                "position": "top",
+                                "x": 87.04167643343582,
+                                "y": -4.00000683943054,
+                                "width": 6,
+                                "height": 6
+                            }
+                        ]
+                    },
+                    "computedPosition": {
+                        "x": 184.99145470204573,
+                        "y": 389.6603937280744,
+                        "z": 0
+                    },
+                    "id": "wmFACt7ZJCXiboXJdripS",
+                    "data": {
+                        "type": "response",
+                        "name": "協助改善心情"
+                    },
+                    "position": {
+                        "x": 184.99145470204573,
+                        "y": 389.6603937280744
+                    },
+                    "selected": false
+                },
+                "targetNode": {
+                    "type": "response",
+                    "dimensions": {
+                        "width": 180,
+                        "height": 67
+                    },
+                    "handleBounds": {
+                        "source": [
+                            {
+                                "id": "7jv41v9qIfQrn_8npK_kd_out",
+                                "position": "bottom",
+                                "x": 87.04167643343582,
+                                "y": 64.66661119317483,
+                                "width": 6,
+                                "height": 6
+                            }
+                        ],
+                        "target": [
+                            {
+                                "id": "7jv41v9qIfQrn_8npK_kd_in",
+                                "position": "top",
+                                "x": 87.04167643343582,
+                                "y": -4.00000683943054,
+                                "width": 6,
+                                "height": 6
+                            }
+                        ]
+                    },
+                    "computedPosition": {
+                        "x": 185.55532447553844,
+                        "y": 473.7640239545817,
+                        "z": 0
+                    },
+                    "id": "7jv41v9qIfQrn_8npK_kd",
+                    "data": {
+                        "type": "response",
+                        "name": "問心情改善"
+                    },
+                    "position": {
+                        "x": 185.55532447553844,
+                        "y": 473.7640239545817
+                    },
+                    "selected": false
+                }
+            },
+            {
+                "id": "vueflow__edge-7jv41v9qIfQrn_8npK_kd7jv41v9qIfQrn_8npK_kd_out-Hwoh6uDgVEyFV1TGa07gJHwoh6uDgVEyFV1TGa07gJ_in",
+                "source": "7jv41v9qIfQrn_8npK_kd",
+                "sourceHandle": "7jv41v9qIfQrn_8npK_kd_out",
+                "target": "Hwoh6uDgVEyFV1TGa07gJ",
+                "targetHandle": "Hwoh6uDgVEyFV1TGa07gJ_in",
+                "z": 0,
+                "sourceX": 0,
+                "sourceY": 0,
+                "targetX": 0,
+                "targetY": 0,
+                "sourceNode": {
+                    "type": "response",
+                    "dimensions": {
+                        "width": 180,
+                        "height": 67
+                    },
+                    "handleBounds": {
+                        "source": [
+                            {
+                                "id": "7jv41v9qIfQrn_8npK_kd_out",
+                                "position": "bottom",
+                                "x": 87.04167643343582,
+                                "y": 64.66661119317483,
+                                "width": 6,
+                                "height": 6
+                            }
+                        ],
+                        "target": [
+                            {
+                                "id": "7jv41v9qIfQrn_8npK_kd_in",
+                                "position": "top",
+                                "x": 87.04167643343582,
+                                "y": -4.00000683943054,
+                                "width": 6,
+                                "height": 6
+                            }
+                        ]
+                    },
+                    "computedPosition": {
+                        "x": 185.55532447553844,
+                        "y": 473.7640239545817,
+                        "z": 0
+                    },
+                    "id": "7jv41v9qIfQrn_8npK_kd",
+                    "data": {
+                        "type": "response",
+                        "name": "問心情改善"
+                    },
+                    "position": {
+                        "x": 185.55532447553844,
+                        "y": 473.7640239545817
+                    },
+                    "selected": false
+                },
+                "targetNode": {
+                    "type": "intent",
+                    "dimensions": {
+                        "width": 180,
+                        "height": 67
+                    },
+                    "handleBounds": {
+                        "source": [
+                            {
+                                "id": "Hwoh6uDgVEyFV1TGa07gJ_out",
+                                "position": "bottom",
+                                "x": 87.0416100157216,
+                                "y": 64.66661119317483,
+                                "width": 6,
+                                "height": 6
+                            }
+                        ],
+                        "target": [
+                            {
+                                "id": "Hwoh6uDgVEyFV1TGa07gJ_in",
+                                "position": "top",
+                                "x": 87.0416100157216,
+                                "y": -4.00000683943054,
+                                "width": 6,
+                                "height": 6
+                            }
+                        ]
+                    },
+                    "computedPosition": {
+                        "x": 90.43854610307022,
+                        "y": 559.6345060351282,
+                        "z": 0
+                    },
+                    "id": "Hwoh6uDgVEyFV1TGa07gJ",
+                    "data": {
+                        "type": "intent",
+                        "name": "同意",
+                        "entities": []
+                    },
+                    "position": {
+                        "x": 90.43854610307022,
+                        "y": 559.6345060351282
+                    },
+                    "selected": false
+                }
+            },
+            {
+                "id": "vueflow__edge-7jv41v9qIfQrn_8npK_kd7jv41v9qIfQrn_8npK_kd_out-XBF2mgXRauq7Cxx1EcdhkXBF2mgXRauq7Cxx1Ecdhk_in",
+                "source": "7jv41v9qIfQrn_8npK_kd",
+                "sourceHandle": "7jv41v9qIfQrn_8npK_kd_out",
+                "target": "XBF2mgXRauq7Cxx1Ecdhk",
+                "targetHandle": "XBF2mgXRauq7Cxx1Ecdhk_in",
+                "z": 0,
+                "sourceX": 0,
+                "sourceY": 0,
+                "targetX": 0,
+                "targetY": 0,
+                "sourceNode": {
+                    "type": "response",
+                    "dimensions": {
+                        "width": 180,
+                        "height": 67
+                    },
+                    "handleBounds": {
+                        "source": [
+                            {
+                                "id": "7jv41v9qIfQrn_8npK_kd_out",
+                                "position": "bottom",
+                                "x": 87.04167643343582,
+                                "y": 64.66661119317483,
+                                "width": 6,
+                                "height": 6
+                            }
+                        ],
+                        "target": [
+                            {
+                                "id": "7jv41v9qIfQrn_8npK_kd_in",
+                                "position": "top",
+                                "x": 87.04167643343582,
+                                "y": -4.00000683943054,
+                                "width": 6,
+                                "height": 6
+                            }
+                        ]
+                    },
+                    "computedPosition": {
+                        "x": 185.55532447553844,
+                        "y": 473.7640239545817,
+                        "z": 0
+                    },
+                    "id": "7jv41v9qIfQrn_8npK_kd",
+                    "data": {
+                        "type": "response",
+                        "name": "問心情改善"
+                    },
+                    "position": {
+                        "x": 185.55532447553844,
+                        "y": 473.7640239545817
+                    },
+                    "selected": false
+                },
+                "targetNode": {
+                    "type": "intent",
+                    "dimensions": {
+                        "width": 180,
+                        "height": 67
+                    },
+                    "handleBounds": {
+                        "source": [
+                            {
+                                "id": "XBF2mgXRauq7Cxx1Ecdhk_out",
+                                "position": "bottom",
+                                "x": 87.04174285115005,
+                                "y": 64.66661119317483,
+                                "width": 6,
+                                "height": 6
+                            }
+                        ],
+                        "target": [
+                            {
+                                "id": "XBF2mgXRauq7Cxx1Ecdhk_in",
+                                "position": "top",
+                                "x": 87.04174285115005,
+                                "y": -4.00000683943054,
+                                "width": 6,
+                                "height": 6
+                            }
+                        ]
+                    },
+                    "computedPosition": {
+                        "x": 283.69471876491014,
+                        "y": 558.8945746597168,
+                        "z": 0
+                    },
+                    "id": "XBF2mgXRauq7Cxx1Ecdhk",
+                    "data": {
+                        "type": "intent",
+                        "name": "拒絕",
+                        "entities": []
+                    },
+                    "position": {
+                        "x": 283.69471876491014,
+                        "y": 558.8945746597168
+                    },
+                    "selected": false
+                }
+            },
+            {
+                "id": "vueflow__edge-Hwoh6uDgVEyFV1TGa07gJHwoh6uDgVEyFV1TGa07gJ_out-fW6tAirYc9yBIUPzRTWa1fW6tAirYc9yBIUPzRTWa1_in",
+                "source": "Hwoh6uDgVEyFV1TGa07gJ",
+                "sourceHandle": "Hwoh6uDgVEyFV1TGa07gJ_out",
+                "target": "fW6tAirYc9yBIUPzRTWa1",
+                "targetHandle": "fW6tAirYc9yBIUPzRTWa1_in",
+                "z": 0,
+                "sourceX": 0,
+                "sourceY": 0,
+                "targetX": 0,
+                "targetY": 0,
+                "sourceNode": {
+                    "type": "intent",
+                    "dimensions": {
+                        "width": 180,
+                        "height": 67
+                    },
+                    "handleBounds": {
+                        "source": [
+                            {
+                                "id": "Hwoh6uDgVEyFV1TGa07gJ_out",
+                                "position": "bottom",
+                                "x": 87.0416100157216,
+                                "y": 64.66661119317483,
+                                "width": 6,
+                                "height": 6
+                            }
+                        ],
+                        "target": [
+                            {
+                                "id": "Hwoh6uDgVEyFV1TGa07gJ_in",
+                                "position": "top",
+                                "x": 87.0416100157216,
+                                "y": -4.00000683943054,
+                                "width": 6,
+                                "height": 6
+                            }
+                        ]
+                    },
+                    "computedPosition": {
+                        "x": 90.43854610307022,
+                        "y": 559.6345060351282,
+                        "z": 0
+                    },
+                    "id": "Hwoh6uDgVEyFV1TGa07gJ",
+                    "data": {
+                        "type": "intent",
+                        "name": "同意",
+                        "entities": []
+                    },
+                    "position": {
+                        "x": 90.43854610307022,
+                        "y": 559.6345060351282
+                    },
+                    "selected": false
+                },
+                "targetNode": {
+                    "type": "response",
+                    "dimensions": {
+                        "width": 180,
+                        "height": 67
+                    },
+                    "handleBounds": {
+                        "source": [
+                            {
+                                "id": "fW6tAirYc9yBIUPzRTWa1_out",
+                                "position": "bottom",
+                                "x": 87.0416100157216,
+                                "y": 64.66661119317483,
+                                "width": 6,
+                                "height": 6
+                            }
+                        ],
+                        "target": [
+                            {
+                                "id": "fW6tAirYc9yBIUPzRTWa1_in",
+                                "position": "top",
+                                "x": 87.0416100157216,
+                                "y": -4.000139674858998,
+                                "width": 6,
+                                "height": 6
+                            }
+                        ]
+                    },
+                    "computedPosition": {
+                        "x": -94.54083611254032,
+                        "y": 644.3584940274329,
+                        "z": 0
+                    },
+                    "id": "fW6tAirYc9yBIUPzRTWa1",
+                    "data": {
+                        "type": "response",
+                        "name": "心情好"
+                    },
+                    "position": {
+                        "x": -94.54083611254032,
+                        "y": 644.3584940274329
+                    },
+                    "selected": false
+                }
+            },
+            {
+                "id": "vueflow__edge-XBF2mgXRauq7Cxx1EcdhkXBF2mgXRauq7Cxx1Ecdhk_out-gRcO9FqlJ1U4qt2PK0m88gRcO9FqlJ1U4qt2PK0m88_in",
+                "source": "XBF2mgXRauq7Cxx1Ecdhk",
+                "sourceHandle": "XBF2mgXRauq7Cxx1Ecdhk_out",
+                "target": "gRcO9FqlJ1U4qt2PK0m88",
+                "targetHandle": "gRcO9FqlJ1U4qt2PK0m88_in",
+                "z": 0,
+                "sourceX": 0,
+                "sourceY": 0,
+                "targetX": 0,
+                "targetY": 0,
+                "sourceNode": {
+                    "type": "intent",
+                    "dimensions": {
+                        "width": 180,
+                        "height": 67
+                    },
+                    "handleBounds": {
+                        "source": [
+                            {
+                                "id": "XBF2mgXRauq7Cxx1Ecdhk_out",
+                                "position": "bottom",
+                                "x": 87.04174285115005,
+                                "y": 64.66661119317483,
+                                "width": 6,
+                                "height": 6
+                            }
+                        ],
+                        "target": [
+                            {
+                                "id": "XBF2mgXRauq7Cxx1Ecdhk_in",
+                                "position": "top",
+                                "x": 87.04174285115005,
+                                "y": -4.00000683943054,
+                                "width": 6,
+                                "height": 6
+                            }
+                        ]
+                    },
+                    "computedPosition": {
+                        "x": 283.69471876491014,
+                        "y": 558.8945746597168,
+                        "z": 0
+                    },
+                    "id": "XBF2mgXRauq7Cxx1Ecdhk",
+                    "data": {
+                        "type": "intent",
+                        "name": "拒絕",
+                        "entities": []
+                    },
+                    "position": {
+                        "x": 283.69471876491014,
+                        "y": 558.8945746597168
+                    },
+                    "selected": false
+                },
+                "targetNode": {
+                    "type": "response",
+                    "dimensions": {
+                        "width": 180,
+                        "height": 67
+                    },
+                    "handleBounds": {
+                        "source": [
+                            {
+                                "id": "gRcO9FqlJ1U4qt2PK0m88_out",
+                                "position": "bottom",
+                                "x": 87.04167643343582,
+                                "y": 64.66667761088907,
+                                "width": 6,
+                                "height": 6
+                            }
+                        ],
+                        "target": [
+                            {
+                                "id": "gRcO9FqlJ1U4qt2PK0m88_in",
+                                "position": "top",
+                                "x": 87.04167643343582,
+                                "y": -3.9999404217163117,
+                                "width": 6,
+                                "height": 6
+                            }
+                        ]
+                    },
+                    "computedPosition": {
+                        "x": 285.35982490996105,
+                        "y": 644.2625321010142,
+                        "z": 0
+                    },
+                    "id": "gRcO9FqlJ1U4qt2PK0m88",
+                    "data": {
+                        "type": "response",
+                        "name": "心情差"
+                    },
+                    "position": {
+                        "x": 285.35982490996105,
+                        "y": 644.2625321010142
+                    },
+                    "selected": false
+                }
+            },
+            {
+                "id": "vueflow__edge-gRcO9FqlJ1U4qt2PK0m88gRcO9FqlJ1U4qt2PK0m88_out-endundefined_in",
+                "source": "gRcO9FqlJ1U4qt2PK0m88",
+                "sourceHandle": "gRcO9FqlJ1U4qt2PK0m88_out",
+                "target": "end",
+                "targetHandle": "undefined_in",
+                "z": 0,
+                "sourceX": 0,
+                "sourceY": 0,
+                "targetX": 0,
+                "targetY": 0,
+                "sourceNode": {
+                    "type": "response",
+                    "dimensions": {
+                        "width": 180,
+                        "height": 67
+                    },
+                    "handleBounds": {
+                        "source": [
+                            {
+                                "id": "gRcO9FqlJ1U4qt2PK0m88_out",
+                                "position": "bottom",
+                                "x": 87.04167643343582,
+                                "y": 64.66667761088907,
+                                "width": 6,
+                                "height": 6
+                            }
+                        ],
+                        "target": [
+                            {
+                                "id": "gRcO9FqlJ1U4qt2PK0m88_in",
+                                "position": "top",
+                                "x": 87.04167643343582,
+                                "y": -3.9999404217163117,
+                                "width": 6,
+                                "height": 6
+                            }
+                        ]
+                    },
+                    "computedPosition": {
+                        "x": 285.35982490996105,
+                        "y": 644.2625321010142,
+                        "z": 0
+                    },
+                    "id": "gRcO9FqlJ1U4qt2PK0m88",
+                    "data": {
+                        "type": "response",
+                        "name": "心情差"
+                    },
+                    "position": {
+                        "x": 285.35982490996105,
+                        "y": 644.2625321010142
+                    },
+                    "selected": false
+                },
+                "targetNode": {
+                    "type": "end",
+                    "dimensions": {
+                        "width": 180,
+                        "height": 39
+                    },
+                    "handleBounds": {
+                        "target": [
+                            {
+                                "id": "undefined_in",
+                                "position": "top",
+                                "x": 87.04167643343582,
+                                "y": -4.00000683943054,
+                                "width": 6,
+                                "height": 6
+                            }
+                        ]
+                    },
+                    "computedPosition": {
+                        "x": -13.18805033619418,
+                        "y": 746.1556963018637,
+                        "z": 0
+                    },
+                    "id": "end",
+                    "data": {
+                        "type": "end"
+                    },
+                    "position": {
+                        "x": -13.18805033619418,
+                        "y": 746.1556963018637
+                    },
+                    "selected": false
+                }
+            }
+        ],
+        "zoom": 0.8000000000000004,
+        "nodes": [
+            {
+                "type": "start",
+                "dimensions": {
+                    "width": 180,
+                    "height": 39
+                },
+                "handleBounds": {
+                    "source": [
+                        {
+                            "id": "undefined_out",
+                            "position": "bottom",
+                            "x": 87.04167643343582,
+                            "y": 36.666654641518114,
+                            "width": 6,
+                            "height": 6
+                        }
+                    ]
+                },
+                "computedPosition": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "id": "start",
+                "position": {
+                    "x": 0,
+                    "y": 0
+                },
+                "data": {
+                    "type": "start"
+                }
+            },
+            {
+                "type": "end",
+                "dimensions": {
+                    "width": 180,
+                    "height": 39
+                },
+                "handleBounds": {
+                    "target": [
+                        {
+                            "id": "undefined_in",
+                            "position": "top",
+                            "x": 87.04167643343582,
+                            "y": -4.00000683943054,
+                            "width": 6,
+                            "height": 6
+                        }
+                    ]
+                },
+                "computedPosition": {
+                    "x": -13.18805033619418,
+                    "y": 746.1556963018637,
+                    "z": 0
+                },
+                "id": "end",
+                "data": {
+                    "type": "end"
+                },
+                "position": {
+                    "x": -13.18805033619418,
+                    "y": 746.1556963018637
+                },
+                "selected": false
+            },
+            {
+                "type": "intent",
+                "dimensions": {
+                    "width": 180,
+                    "height": 67
+                },
+                "handleBounds": {
+                    "source": [
+                        {
+                            "id": "nzQlKZQaln45VbR2WHf95_out",
+                            "position": "bottom",
+                            "x": 87.04167643343582,
+                            "y": 64.6666277976034,
+                            "width": 6,
+                            "height": 6
+                        }
+                    ],
+                    "target": [
+                        {
+                            "id": "nzQlKZQaln45VbR2WHf95_in",
+                            "position": "top",
+                            "x": 87.04167643343582,
+                            "y": -4.00000683943054,
+                            "width": 6,
+                            "height": 6
+                        }
+                    ]
+                },
+                "computedPosition": {
+                    "x": 0,
+                    "y": 54.61231085118567,
+                    "z": 0
+                },
+                "id": "nzQlKZQaln45VbR2WHf95",
+                "data": {
+                    "type": "intent",
+                    "name": "問候",
+                    "entities": []
+                },
+                "position": {
+                    "x": 0,
+                    "y": 54.61231085118567
+                },
+                "selected": false
+            },
+            {
+                "type": "response",
+                "dimensions": {
+                    "width": 180,
+                    "height": 67
+                },
+                "handleBounds": {
+                    "source": [
+                        {
+                            "id": "b6m-_O6vV_i1bgQNJhwPI_out",
+                            "position": "bottom",
+                            "x": 87.04167643343582,
+                            "y": 64.66664440203195,
+                            "width": 6,
+                            "height": 6
+                        }
+                    ],
+                    "target": [
+                        {
+                            "id": "b6m-_O6vV_i1bgQNJhwPI_in",
+                            "position": "top",
+                            "x": 87.04167643343582,
+                            "y": -3.999990235001983,
+                            "width": 6,
+                            "height": 6
+                        }
+                    ]
+                },
+                "computedPosition": {
+                    "x": -0.7987499999999983,
+                    "y": 137.24640953213427,
+                    "z": 0
+                },
+                "id": "b6m-_O6vV_i1bgQNJhwPI",
+                "data": {
+                    "type": "response",
+                    "name": "問候"
+                },
+                "position": {
+                    "x": -0.7987499999999983,
+                    "y": 137.24640953213427
+                },
+                "selected": false
+            },
+            {
+                "type": "response",
+                "dimensions": {
+                    "width": 180,
+                    "height": 67
+                },
+                "handleBounds": {
+                    "source": [
+                        {
+                            "id": "_bKJllfUIzYhehZiFNUbn_out",
+                            "position": "bottom",
+                            "x": 87.04154359800737,
+                            "y": 64.66667761088907,
+                            "width": 6,
+                            "height": 6
+                        }
+                    ],
+                    "target": [
+                        {
+                            "id": "_bKJllfUIzYhehZiFNUbn_in",
+                            "position": "top",
+                            "x": 87.04154359800737,
+                            "y": -3.999973630573426,
+                            "width": 6,
+                            "height": 6
+                        }
+                    ]
+                },
+                "computedPosition": {
+                    "x": -2.7049128297628755,
+                    "y": 217.7929210428457,
+                    "z": 0
+                },
+                "id": "_bKJllfUIzYhehZiFNUbn",
+                "data": {
+                    "type": "response",
+                    "name": "問心情"
+                },
+                "position": {
+                    "x": -2.7049128297628755,
+                    "y": 217.7929210428457
+                },
+                "selected": false
+            },
+            {
+                "type": "intent",
+                "dimensions": {
+                    "width": 180,
+                    "height": 67
+                },
+                "handleBounds": {
+                    "source": [
+                        {
+                            "id": "X2yCsECwtXjzRYNB9Gixo_out",
+                            "position": "bottom",
+                            "x": 87.04167643343582,
+                            "y": 64.66661119317483,
+                            "width": 6,
+                            "height": 6
+                        }
+                    ],
+                    "target": [
+                        {
+                            "id": "X2yCsECwtXjzRYNB9Gixo_in",
+                            "position": "top",
+                            "x": 87.04167643343582,
+                            "y": -4.00000683943054,
+                            "width": 6,
+                            "height": 6
+                        }
+                    ]
+                },
+                "computedPosition": {
+                    "x": -97.44749999999999,
+                    "y": 304.3545113861735,
+                    "z": 0
+                },
+                "id": "X2yCsECwtXjzRYNB9Gixo",
+                "data": {
+                    "type": "intent",
+                    "name": "心情好",
+                    "entities": []
+                },
+                "position": {
+                    "x": -97.44749999999999,
+                    "y": 304.3545113861735
+                },
+                "selected": false
+            },
+            {
+                "type": "intent",
+                "dimensions": {
+                    "width": 180,
+                    "height": 67
+                },
+                "handleBounds": {
+                    "source": [
+                        {
+                            "id": "SoPNpOCwrQ6_XnK9MaYRs_out",
+                            "position": "bottom",
+                            "x": 87.0416100157216,
+                            "y": 64.66661119317483,
+                            "width": 6,
+                            "height": 6
+                        }
+                    ],
+                    "target": [
+                        {
+                            "id": "SoPNpOCwrQ6_XnK9MaYRs_in",
+                            "position": "top",
+                            "x": 87.0416100157216,
+                            "y": -4.00000683943054,
+                            "width": 6,
+                            "height": 6
+                        }
+                    ]
+                },
+                "computedPosition": {
+                    "x": 184.68279187228288,
+                    "y": 304.3545113861734,
+                    "z": 0
+                },
+                "id": "SoPNpOCwrQ6_XnK9MaYRs",
+                "data": {
+                    "type": "intent",
+                    "name": "心情差",
+                    "entities": []
+                },
+                "position": {
+                    "x": 184.68279187228288,
+                    "y": 304.3545113861734
+                },
+                "selected": false
+            },
+            {
+                "type": "response",
+                "dimensions": {
+                    "width": 180,
+                    "height": 67
+                },
+                "handleBounds": {
+                    "source": [
+                        {
+                            "id": "fW6tAirYc9yBIUPzRTWa1_out",
+                            "position": "bottom",
+                            "x": 87.0416100157216,
+                            "y": 64.66661119317483,
+                            "width": 6,
+                            "height": 6
+                        }
+                    ],
+                    "target": [
+                        {
+                            "id": "fW6tAirYc9yBIUPzRTWa1_in",
+                            "position": "top",
+                            "x": 87.0416100157216,
+                            "y": -4.000139674858998,
+                            "width": 6,
+                            "height": 6
+                        }
+                    ]
+                },
+                "computedPosition": {
+                    "x": -94.54083611254032,
+                    "y": 644.3584940274329,
+                    "z": 0
+                },
+                "id": "fW6tAirYc9yBIUPzRTWa1",
+                "data": {
+                    "type": "response",
+                    "name": "心情好"
+                },
+                "position": {
+                    "x": -94.54083611254032,
+                    "y": 644.3584940274329
+                },
+                "selected": false
+            },
+            {
+                "type": "response",
+                "dimensions": {
+                    "width": 180,
+                    "height": 67
+                },
+                "handleBounds": {
+                    "source": [
+                        {
+                            "id": "wmFACt7ZJCXiboXJdripS_out",
+                            "position": "bottom",
+                            "x": 87.04167643343582,
+                            "y": 64.66667761088907,
+                            "width": 6,
+                            "height": 6
+                        }
+                    ],
+                    "target": [
+                        {
+                            "id": "wmFACt7ZJCXiboXJdripS_in",
+                            "position": "top",
+                            "x": 87.04167643343582,
+                            "y": -4.00000683943054,
+                            "width": 6,
+                            "height": 6
+                        }
+                    ]
+                },
+                "computedPosition": {
+                    "x": 184.99145470204573,
+                    "y": 389.6603937280744,
+                    "z": 0
+                },
+                "id": "wmFACt7ZJCXiboXJdripS",
+                "data": {
+                    "type": "response",
+                    "name": "協助改善心情"
+                },
+                "position": {
+                    "x": 184.99145470204573,
+                    "y": 389.6603937280744
+                },
+                "selected": false
+            },
+            {
+                "type": "response",
+                "dimensions": {
+                    "width": 180,
+                    "height": 67
+                },
+                "handleBounds": {
+                    "source": [
+                        {
+                            "id": "7jv41v9qIfQrn_8npK_kd_out",
+                            "position": "bottom",
+                            "x": 87.04167643343582,
+                            "y": 64.66661119317483,
+                            "width": 6,
+                            "height": 6
+                        }
+                    ],
+                    "target": [
+                        {
+                            "id": "7jv41v9qIfQrn_8npK_kd_in",
+                            "position": "top",
+                            "x": 87.04167643343582,
+                            "y": -4.00000683943054,
+                            "width": 6,
+                            "height": 6
+                        }
+                    ]
+                },
+                "computedPosition": {
+                    "x": 185.55532447553844,
+                    "y": 473.7640239545817,
+                    "z": 0
+                },
+                "id": "7jv41v9qIfQrn_8npK_kd",
+                "data": {
+                    "type": "response",
+                    "name": "問心情改善"
+                },
+                "position": {
+                    "x": 185.55532447553844,
+                    "y": 473.7640239545817
+                },
+                "selected": false
+            },
+            {
+                "type": "intent",
+                "dimensions": {
+                    "width": 180,
+                    "height": 67
+                },
+                "handleBounds": {
+                    "source": [
+                        {
+                            "id": "Hwoh6uDgVEyFV1TGa07gJ_out",
+                            "position": "bottom",
+                            "x": 87.0416100157216,
+                            "y": 64.66661119317483,
+                            "width": 6,
+                            "height": 6
+                        }
+                    ],
+                    "target": [
+                        {
+                            "id": "Hwoh6uDgVEyFV1TGa07gJ_in",
+                            "position": "top",
+                            "x": 87.0416100157216,
+                            "y": -4.00000683943054,
+                            "width": 6,
+                            "height": 6
+                        }
+                    ]
+                },
+                "computedPosition": {
+                    "x": 90.43854610307022,
+                    "y": 559.6345060351282,
+                    "z": 0
+                },
+                "id": "Hwoh6uDgVEyFV1TGa07gJ",
+                "data": {
+                    "type": "intent",
+                    "name": "同意",
+                    "entities": []
+                },
+                "position": {
+                    "x": 90.43854610307022,
+                    "y": 559.6345060351282
+                },
+                "selected": false
+            },
+            {
+                "type": "intent",
+                "dimensions": {
+                    "width": 180,
+                    "height": 67
+                },
+                "handleBounds": {
+                    "source": [
+                        {
+                            "id": "XBF2mgXRauq7Cxx1Ecdhk_out",
+                            "position": "bottom",
+                            "x": 87.04174285115005,
+                            "y": 64.66661119317483,
+                            "width": 6,
+                            "height": 6
+                        }
+                    ],
+                    "target": [
+                        {
+                            "id": "XBF2mgXRauq7Cxx1Ecdhk_in",
+                            "position": "top",
+                            "x": 87.04174285115005,
+                            "y": -4.00000683943054,
+                            "width": 6,
+                            "height": 6
+                        }
+                    ]
+                },
+                "computedPosition": {
+                    "x": 283.69471876491014,
+                    "y": 558.8945746597168,
+                    "z": 0
+                },
+                "id": "XBF2mgXRauq7Cxx1Ecdhk",
+                "data": {
+                    "type": "intent",
+                    "name": "拒絕",
+                    "entities": []
+                },
+                "position": {
+                    "x": 283.69471876491014,
+                    "y": 558.8945746597168
+                },
+                "selected": false
+            },
+            {
+                "type": "response",
+                "dimensions": {
+                    "width": 180,
+                    "height": 67
+                },
+                "handleBounds": {
+                    "source": [
+                        {
+                            "id": "gRcO9FqlJ1U4qt2PK0m88_out",
+                            "position": "bottom",
+                            "x": 87.04167643343582,
+                            "y": 64.66667761088907,
+                            "width": 6,
+                            "height": 6
+                        }
+                    ],
+                    "target": [
+                        {
+                            "id": "gRcO9FqlJ1U4qt2PK0m88_in",
+                            "position": "top",
+                            "x": 87.04167643343582,
+                            "y": -3.9999404217163117,
+                            "width": 6,
+                            "height": 6
+                        }
+                    ]
+                },
+                "computedPosition": {
+                    "x": 285.35982490996105,
+                    "y": 644.2625321010142,
+                    "z": 0
+                },
+                "id": "gRcO9FqlJ1U4qt2PK0m88",
+                "data": {
+                    "type": "response",
+                    "name": "心情差"
+                },
+                "position": {
+                    "x": 285.35982490996105,
+                    "y": 644.2625321010142
+                },
+                "selected": false
+            }
+        ]
+    }
+}

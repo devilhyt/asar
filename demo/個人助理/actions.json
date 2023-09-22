@@ -1,0 +1,113 @@
+{
+    "控制設備": {
+        "blockly": {
+            "blocks": {
+                "languageVersion": 0,
+                "blocks": [
+                    {
+                        "type": "rpi_board",
+                        "id": "*vC|7^pRhpa[2*%54oM$",
+                        "x": 530,
+                        "y": 250,
+                        "fields": {
+                            "MODE": "BOARD"
+                        },
+                        "inputs": {
+                            "statement": {
+                                "block": {
+                                    "type": "rpi_io_write",
+                                    "id": "edA{R~gpiJJg)lC{Kx_i",
+                                    "inputs": {
+                                        "PIN": {
+                                            "block": {
+                                                "type": "math_number",
+                                                "id": "i8xZfl*l[0+,kZNJ5kh;",
+                                                "fields": {
+                                                    "NUM": 23
+                                                }
+                                            }
+                                        },
+                                        "VOLTAGE": {
+                                            "block": {
+                                                "type": "rpi_io_voltage",
+                                                "id": "V];;Fl^DGggSHzB1TxO}",
+                                                "fields": {
+                                                    "VOLTAGE": "HIGH"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "next": {
+                                        "block": {
+                                            "type": "variables_set_dynamic",
+                                            "id": "M9(L~=k1WNl)mkJTEyoa",
+                                            "fields": {
+                                                "VAR": {
+                                                    "id": "QrVedlQB122/]?+r$,4*"
+                                                }
+                                            },
+                                            "inputs": {
+                                                "VALUE": {
+                                                    "block": {
+                                                        "type": "rpi_lcd_define",
+                                                        "id": "ph7b3St$]fQE}1=?;l0s",
+                                                        "fields": {
+                                                            "ADDRESS": "0x27",
+                                                            "BACKLIGHT": "True",
+                                                            "AUTOLINEBREAKS": "True"
+                                                        },
+                                                        "inputs": {
+                                                            "EXPANDER": {
+                                                                "block": {
+                                                                    "type": "text",
+                                                                    "id": "|5~caSrC7M7mxByL~)Uc",
+                                                                    "fields": {
+                                                                        "TEXT": "PCF8574"
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            "next": {
+                                                "block": {
+                                                    "type": "rpi_lcd_print",
+                                                    "id": "02]fCOsqa~]d7n{4q1sx",
+                                                    "fields": {
+                                                        "VAR": {
+                                                            "id": "QrVedlQB122/]?+r$,4*"
+                                                        }
+                                                    },
+                                                    "inputs": {
+                                                        "TEXT": {
+                                                            "block": {
+                                                                "type": "text",
+                                                                "id": "1uWeyVO6||}!H6O.+9~l",
+                                                                "fields": {
+                                                                    "TEXT": "Hello World !"
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "variables": [
+                {
+                    "name": "lcd",
+                    "id": "QrVedlQB122/]?+r$,4*"
+                }
+            ]
+        },
+        "packages": [],
+        "code": "import RPi.GPIO as GPIO\nfrom RPLCD.i2c import CharLCD\n\nlcd = None\n\nGPIO.setwarnings(False)\n\n# RPi pin mode = BOARD\n\nGPIO.setmode(GPIO.BCM)\n\nGPIO.setup(11, GPIO.OUT)\n\n\ntry:\n    GPIO.output(11, GPIO.HIGH)\n    lcd = CharLCD(i2c_expander='PCF8574', address=0x27, backlight_enabled=True, auto_linebreaks=True)\n    lcd.write_string('Hello World !')\nexcept Exception as e:\n    print(e)\n"
+    }
+}

@@ -1,0 +1,134 @@
+{
+    "問候": {
+        "examples": [
+            {
+                "text": "嗨",
+                "labels": []
+            },
+            {
+                "text": "哈嘍",
+                "labels": []
+            },
+            {
+                "text": "你好",
+                "labels": []
+            },
+            {
+                "text": "您好",
+                "labels": []
+            },
+            {
+                "text": "嘿",
+                "labels": []
+            }
+        ]
+    },
+    "心情好": {
+        "examples": [
+            {
+                "text": "很好",
+                "labels": []
+            },
+            {
+                "text": "好",
+                "labels": []
+            },
+            {
+                "text": "非常好",
+                "labels": []
+            },
+            {
+                "text": "不錯",
+                "labels": []
+            },
+            {
+                "text": "還不錯",
+                "labels": []
+            },
+            {
+                "text": "很不錯",
+                "labels": []
+            }
+        ]
+    },
+    "心情差": {
+        "examples": [
+            {
+                "text": "不好",
+                "labels": []
+            },
+            {
+                "text": "很不好",
+                "labels": []
+            },
+            {
+                "text": "很差",
+                "labels": []
+            },
+            {
+                "text": "不太好",
+                "labels": []
+            },
+            {
+                "text": "有點衰",
+                "labels": []
+            },
+            {
+                "text": "不是很好",
+                "labels": []
+            },
+            {
+                "text": "很糟",
+                "labels": []
+            }
+        ]
+    },
+    "同意": {
+        "examples": [
+            {
+                "text": "有",
+                "labels": []
+            },
+            {
+                "text": "當然",
+                "labels": []
+            },
+            {
+                "text": "是",
+                "labels": []
+            },
+            {
+                "text": "摁",
+                "labels": []
+            },
+            {
+                "text": "對",
+                "labels": []
+            }
+        ]
+    },
+    "拒絕": {
+        "examples": [
+            {
+                "text": "沒有",
+                "labels": []
+            },
+            {
+                "text": "沒",
+                "labels": []
+            },
+            {
+                "text": "還是沒有",
+                "labels": []
+            },
+            {
+                "text": "不",
+                "labels": []
+            },
+            {
+                "text": "沒唉",
+                "labels": []
+            }
+        ]
+    }
+}

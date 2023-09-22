@@ -1,0 +1,193 @@
+nlu:
+- intent: 問候
+  examples:
+  - text: |
+      嗨
+  - text: |
+      哈嘍
+  - text: |
+      你好
+  - text: |
+      您好
+  - text: |
+      嘿
+- intent: 心情好
+  examples:
+  - text: |
+      很好
+  - text: |
+      好
+  - text: |
+      非常好
+  - text: |
+      不錯
+  - text: |
+      還不錯
+  - text: |
+      很不錯
+- intent: 心情差
+  examples:
+  - text: |
+      不好
+  - text: |
+      很不好
+  - text: |
+      很差
+  - text: |
+      不太好
+  - text: |
+      有點衰
+  - text: |
+      不是很好
+  - text: |
+      很糟
+- intent: 同意
+  examples:
+  - text: |
+      有
+  - text: |
+      當然
+  - text: |
+      是
+  - text: |
+      摁
+  - text: |
+      對
+- intent: 拒絕
+  examples:
+  - text: |
+      沒有
+  - text: |
+      沒
+  - text: |
+      還是沒有
+  - text: |
+      不
+  - text: |
+      沒唉
+intents:
+- 問候
+- 心情好
+- 心情差
+- 同意
+- 拒絕
+entities: []
+responses:
+  utter_問候:
+  - text: 嗨！
+  - text: 哈嘍
+  - text: 嘿！
+  utter_問心情:
+  - text: 今天心情好嗎？
+  - text: 今天心情如何？
+  utter_心情好:
+  - text: "太好了！\n你開心我也開心"
+  - text: "太棒了！\n你開心我也開心"
+  utter_協助改善心情:
+  - text: "看看這隻可愛的動物吧！\n希望能讓你心情變好"
+    image: http://localhost/scenarios/image/animal.jpg
+  - text: "看看這個美麗的風景吧！\n希望能讓你心情變好"
+    image: http://localhost/scenarios/image/animal.jpg
+  utter_問心情改善:
+  - text: 心情好點了嗎？
+  - text: 有幫助到你嗎？
+  utter_心情差:
+  - text: "好吧...\n試著做有興趣的事吧\n也許能讓心情變好"
+  - text: "好吧...\n外出走走散散心吧"
+actions:
+- 控制設備
+slots: {}
+forms: {}
+stories:
+- story: 問候_0
+  steps:
+  - intent: 問候
+  - action: utter_問候
+  - action: utter_問心情
+  - intent: 心情好
+  - action: utter_心情好
+- story: 問候_1
+  steps:
+  - intent: 問候
+  - action: utter_問候
+  - action: utter_問心情
+  - intent: 心情差
+  - action: utter_協助改善心情
+  - action: utter_問心情改善
+  - intent: 同意
+  - action: utter_心情好
+- story: 問候_2
+  steps:
+  - intent: 問候
+  - action: utter_問候
+  - action: utter_問心情
+  - intent: 心情差
+  - action: utter_協助改善心情
+  - action: utter_問心情改善
+  - intent: 拒絕
+  - action: utter_心情差
+rules: []
+recipe: default.v1
+language: zh
+pipeline:
+# # No configuration for the NLU pipeline was provided. The following default pipeline was used to train your model.
+# # If you'd like to customize it, uncomment and adjust the pipeline.
+# # See https://rasa.com/docs/rasa/tuning-your-model for more information.
+- name: custom_components.ckip_transformers_tokenizer.CkipTransformersTokenizer
+  model_name: ./custom_components/models/albert-base-chinese-ws
+  show_progress: false
+- name: LanguageModelFeaturizer
+  model_name: bert
+  model_weights: ./custom_components/models/bert-base-chinese
+# - name: RegexFeaturizer
+#   # use match word boundaries for lookup table
+#   use_word_boundaries: False
+- name: LexicalSyntacticFeaturizer
+# - name: CountVectorsFeaturizer
+# - name: CountVectorsFeaturizer
+#   analyzer: char_wb
+#   min_ngram: 1
+#   max_ngram: 4
+- name: custom_components.ckip_transformers_extractor.CkipTransformersExtractor
+  model_name: ./custom_components/models/albert-base-chinese-ner
+  show_progress: false
+  dimensions:
+- name: custom_components.diet_classifier.DIETClassifier
+  epochs: 100
+  # sigmoid cross entropy loss
+  constrain_similarities: true
+  dimensions:
+# - name: RegexEntityExtractor
+#   # use match word boundaries for lookup table
+#   use_word_boundaries: False
+- name: EntitySynonymMapper
+- name: ResponseSelector
+  epochs: 100
+  # sigmoid cross entropy loss
+  constrain_similarities: true
+- name: FallbackClassifier
+  threshold: 0.3
+  ambiguity_threshold: 0.1
+
+# Configuration for Rasa Core.
+# https://rasa.com/docs/rasa/core/policies/
+policies:
+# # No configuration for policies was provided. The following default policies were used to train your model.
+# # If you'd like to customize them, uncomment and adjust the policies.
+# # See https://rasa.com/docs/rasa/policies for more information.
+- name: AugmentedMemoizationPolicy
+- name: RulePolicy
+  # core_fallback_threshold: 0.3
+  enable_fallback_prediction: false
+# - name: UnexpecTEDIntentPolicy
+#   max_history: 5
+#   epochs: 100
+- name: TEDPolicy
+  max_history: 5
+  epochs: 100
+  # sigmoid cross entropy loss
+  constrain_similarities: true
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
