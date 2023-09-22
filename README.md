@@ -158,6 +158,8 @@ Asar使用Transformer、ALBERT近代深度學習自然語言處理技術（NLP�
     │   └── Dockerfile
     ├── docker-compose-dev.yml          # 用於開發環境的compose
     ├── docker-compose-prod.yml         # 用於生產環境的compose
+    ├── doc                             # 說明文件
+    ├── demo                            # 範例專案
     └── ...
 ```
 
