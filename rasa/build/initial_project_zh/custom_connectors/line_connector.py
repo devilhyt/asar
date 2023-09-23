@@ -165,7 +165,7 @@ class LineConnectorInput(InputChannel):
                                 ))
                             elif isinstance(msg, LocationMessage):
                                 # Send to RASA
-                                event_message = f'ตำแหน่ง ละติจูด: {msg.latitude} ลองจิจูด: {msg.longitude}'
+                                event_message = f'latitude: {msg.latitude} longitude: {msg.longitude}'
                                 await on_new_message(UserMessage(
                                     text=event_message,
                                     output_channel=line_output,
@@ -178,11 +178,11 @@ class LineConnectorInput(InputChannel):
                                 if isinstance(msg, StickerMessage):
                                     event_message = "ʕ•́ᴥ•̀ʔっ♡"
                                 if isinstance(msg, ImageMessage):
-                                    event_message = "ระบบแชทเรายังไม่รองรับรูปภาพนะครับ"
+                                    event_message = "Images are not currently supported."
                                 if isinstance(msg, VideoMessage):
-                                    event_message = "ระบบแชทเรายังไม่รองรับคลิปวิดีโอนะครับ"
+                                    event_message = "Videos are not currently supported."
                                 if isinstance(msg, AudioMessage):
-                                    event_message = "ระบบแชทเรายังไม่รองรับคลิปเสียงนะครับ"
+                                    event_message = "Audios are not currently supported."
                         if isinstance(event, PostbackEvent):
                             self.process_postback_events(line_output, event)
                     return response.json({"status": "Line Webhook success"})
@@ -209,15 +209,5 @@ class LineConnectorInput(InputChannel):
 
     @staticmethod
     def process_postback_events(line_output, event):
-        if event.postback.data == "show_siit_tu_location":
-            # lat, lon, name_en, name_th = event.postback.data.split(',')[:4]
-            line_output.line_client.reply_message(
-                event.reply_token,
-                LocationSendMessage(
-                    title='SIIT',
-                    address='ถนน พหลโยธิน ตำบล คลองหนึ่ง อำเภอคลองหลวง ปทุมธานี 12120',
-                    latitude=float('14.069114740861002'),
-                    longitude=float('100.60751134141053')
-                )
-            )
+        pass
 
