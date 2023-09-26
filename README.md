@@ -1,4 +1,4 @@
-# Asar 聊天機器人建構平台
+# Asar 聊天機器人設計平台
 
 <img src="img/asar_logo.png" style="width: 30%;">
 
